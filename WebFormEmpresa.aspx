@@ -74,7 +74,7 @@
                                 <div class="col-12 d-flex flex-column mt-3">
                                     <div class="d-flex">
                                         <asp:Label ID="lblempresa" runat="server" Text="Empresa" CssClass="" ToolTip="" Width="100px"></asp:Label>
-                                        <asp:TextBox ID="TxtEMPRESA" runat="server" ReadOnly="true" CssClass="form-control ml-4"></asp:TextBox>
+                                        <asp:TextBox ID="TxtEMPRESA" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
                                     </div>
                                 </div>
                                 <%--  NOMBRE--%>
@@ -88,7 +88,7 @@
                                 <div class="col-12 d-flex flex-column mt-3">
                                     <div class="d-flex">
                                         <asp:Label ID="lblubicacion" runat="server" Text="Ubicacion" CssClass="" ToolTip="" Width="100px"></asp:Label>
-                                        <asp:TextBox ID="TxtUBICACION" runat="server" ReadOnly="true" CssClass="form-control ml-4"></asp:TextBox>
+                                        <asp:TextBox ID="TxtUBICACION" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
                                     </div>
                                 </div>
                                 <%-- EMAIL --%>

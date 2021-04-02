@@ -11,18 +11,24 @@ namespace ViewsLayer
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            String vResfrescarObjeto;
-            if (IsPostBack)
+            if (!IsPostBack)
             {
-                vResfrescarObjeto = "nueva";
+                CargarTabla();
             }
             else
             {
-                cargarTabla();
             }
+            CargarTabla();
         }
 
-        public void cargarTabla()
+        public void informar(String m)
+        {
+            AlertFooter.Visible = true;
+            informacion.Text = m;
+            informacion.DataBind();
+        }
+
+        public void CargarTabla()
         {
             string m = "";
             try
@@ -53,6 +59,8 @@ namespace ViewsLayer
 
         protected void btnCrear_Click(object sender, EventArgs e)
         {
+            OracleExecute("I");
+
             TxtEMPRESA.Text = "";
             TxtNOMBRE.Text = "";
             TxtUBICACION.Text = "";
@@ -67,10 +75,12 @@ namespace ViewsLayer
         }
 
         protected void tblEmpresas_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            GridViewRow row = tbl.Rows[tbl.SelectedIndex];
+        {         
             try
             {
+                GridViewRow row = tbl.Rows[tbl.SelectedIndex];
+
+                OracleExecute("U");
                 TxtEMPRESA.Text = row.Cells[1].Text;
                 TxtNOMBRE.Text = row.Cells[2].Text;
                 TxtUBICACION.Text = row.Cells[3].Text;
@@ -93,11 +103,14 @@ namespace ViewsLayer
         {
             try
             {
-               
+                OracleExecute("I");
+                tbl.SelectedIndex = -1;
+                btnEliminar.Visible = true;
+                CargarTabla();
             }
             catch (Exception)
             {
-               
+                OnModal(1);
             }
         }
 
@@ -105,12 +118,23 @@ namespace ViewsLayer
         {
             try
             {
-               
+                OracleExecute("D");
+
+                CargarTabla();
             }
             catch (Exception ex)
             {
-                
+                informar(ex.Message);
             }
+        }
+
+        private String OracleExecute(string op)
+        {
+            String result = "";
+            result = Ws.MaintenanceEmpresa(this.TxtEMPRESA.Text, this.TxtNOMBRE.Text, this.TxtUBICACION.Text, this.txtEMAIL.Text, 
+                                           this.txtTELEFONO.Text, op);
+            Ws.Close();
+            return result;
         }
 
         protected void btnSempleadoAgregar_Click(object sender, EventArgs e)
