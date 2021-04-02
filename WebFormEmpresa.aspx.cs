@@ -11,14 +11,15 @@ namespace ViewsLayer
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            if (!IsPostBack)
+            String vResfrescarObjeto;
+            if (IsPostBack)
             {
-                CargarTabla();
+                vResfrescarObjeto = "nueva";
             }
             else
             {
+                CargarTabla();
             }
-            CargarTabla();
         }
 
         public void informar(String m)
@@ -28,6 +29,7 @@ namespace ViewsLayer
             informacion.DataBind();
         }
 
+
         public void CargarTabla()
         {
             string m = "";
@@ -35,7 +37,7 @@ namespace ViewsLayer
             {
                 DataSet Dts = new DataSet();
                 Dts = Ws.GetListEmpresa("", "", "", "", "", "S");
-                
+
                 tbl.DataSource = Dts;
                 tbl.DataBind();
             }
@@ -59,11 +61,9 @@ namespace ViewsLayer
 
         protected void btnCrear_Click(object sender, EventArgs e)
         {
-            OracleExecute("I");
-
-            TxtEMPRESA.Text = "";
-            TxtNOMBRE.Text = "";
-            TxtUBICACION.Text = "";
+            txtEMPRESA.Text = "";
+            txtNOMBRE.Text = "";
+            txtUBICACION.Text = "";
             txtEMAIL.Text = "";
             txtTELEFONO.Text = "";
 
@@ -75,18 +75,17 @@ namespace ViewsLayer
         }
 
         protected void tblEmpresas_SelectedIndexChanged(object sender, EventArgs e)
-        {         
+        {
             try
             {
                 GridViewRow row = tbl.Rows[tbl.SelectedIndex];
 
-                OracleExecute("U");
-                TxtEMPRESA.Text = row.Cells[1].Text;
-                TxtNOMBRE.Text = row.Cells[2].Text;
-                TxtUBICACION.Text = row.Cells[3].Text;
+                txtEMPRESA.Text = row.Cells[1].Text;
+                txtNOMBRE.Text = row.Cells[2].Text;
+                txtUBICACION.Text = row.Cells[3].Text;
                 txtEMAIL.Text = row.Cells[4].Text;
                 txtTELEFONO.Text = row.Cells[5].Text;
-               
+
                 btnEliminar.Visible = true;
                 tbl.SelectedIndex = -1;
                 alertModal.Visible = false;
@@ -131,7 +130,7 @@ namespace ViewsLayer
         private String OracleExecute(string op)
         {
             String result = "";
-            result = Ws.MaintenanceEmpresa(this.TxtEMPRESA.Text, this.TxtNOMBRE.Text, this.TxtUBICACION.Text, this.txtEMAIL.Text, 
+            result = Ws.MaintenanceEmpresa(this.txtEMPRESA.Text, this.txtNOMBRE.Text, this.txtUBICACION.Text, this.txtEMAIL.Text,
                                            this.txtTELEFONO.Text, op);
             Ws.Close();
             return result;
@@ -139,7 +138,6 @@ namespace ViewsLayer
 
         protected void btnSempleadoAgregar_Click(object sender, EventArgs e)
         {
-
         }
     }
 }
