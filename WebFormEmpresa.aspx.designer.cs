@@ -96,13 +96,13 @@ namespace ViewsLayer
         protected global::System.Web.UI.WebControls.Label lblempresa;
 
         /// <summary>
-        /// Control TxtEMPRESA.
+        /// Control txtEMPRESA.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtEMPRESA;
+        protected global::System.Web.UI.WebControls.TextBox txtEMPRESA;
 
         /// <summary>
         /// Control lblnombre.
@@ -114,13 +114,13 @@ namespace ViewsLayer
         protected global::System.Web.UI.WebControls.Label lblnombre;
 
         /// <summary>
-        /// Control TxtNOMBRE.
+        /// Control txtNOMBRE.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtNOMBRE;
+        protected global::System.Web.UI.WebControls.TextBox txtNOMBRE;
 
         /// <summary>
         /// Control lblubicacion.
@@ -132,13 +132,13 @@ namespace ViewsLayer
         protected global::System.Web.UI.WebControls.Label lblubicacion;
 
         /// <summary>
-        /// Control TxtUBICACION.
+        /// Control txtUBICACION.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TxtUBICACION;
+        protected global::System.Web.UI.WebControls.TextBox txtUBICACION;
 
         /// <summary>
         /// Control lblemail.

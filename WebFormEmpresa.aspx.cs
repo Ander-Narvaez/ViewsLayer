@@ -18,18 +18,26 @@ namespace ViewsLayer
             }
             else
             {
-                cargarTabla();
+                CargarTabla();
             }
         }
 
-        public void cargarTabla()
+        public void informar(String m)
+        {
+            AlertFooter.Visible = true;
+            informacion.Text = m;
+            informacion.DataBind();
+        }
+
+
+        public void CargarTabla()
         {
             string m = "";
             try
             {
                 DataSet Dts = new DataSet();
                 Dts = Ws.GetListEmpresa("", "", "", "", "", "S");
-                
+
                 tbl.DataSource = Dts;
                 tbl.DataBind();
             }
@@ -53,9 +61,9 @@ namespace ViewsLayer
 
         protected void btnCrear_Click(object sender, EventArgs e)
         {
-            TxtEMPRESA.Text = "";
-            TxtNOMBRE.Text = "";
-            TxtUBICACION.Text = "";
+            txtEMPRESA.Text = "";
+            txtNOMBRE.Text = "";
+            txtUBICACION.Text = "";
             txtEMAIL.Text = "";
             txtTELEFONO.Text = "";
 
@@ -68,15 +76,16 @@ namespace ViewsLayer
 
         protected void tblEmpresas_SelectedIndexChanged(object sender, EventArgs e)
         {
-            GridViewRow row = tbl.Rows[tbl.SelectedIndex];
             try
             {
-                TxtEMPRESA.Text = row.Cells[1].Text;
-                TxtNOMBRE.Text = row.Cells[2].Text;
-                TxtUBICACION.Text = row.Cells[3].Text;
+                GridViewRow row = tbl.Rows[tbl.SelectedIndex];
+
+                txtEMPRESA.Text = row.Cells[1].Text;
+                txtNOMBRE.Text = row.Cells[2].Text;
+                txtUBICACION.Text = row.Cells[3].Text;
                 txtEMAIL.Text = row.Cells[4].Text;
                 txtTELEFONO.Text = row.Cells[5].Text;
-               
+
                 btnEliminar.Visible = true;
                 tbl.SelectedIndex = -1;
                 alertModal.Visible = false;
@@ -93,11 +102,14 @@ namespace ViewsLayer
         {
             try
             {
-               
+                OracleExecute("I");
+                tbl.SelectedIndex = -1;
+                btnEliminar.Visible = true;
+                CargarTabla();
             }
             catch (Exception)
             {
-               
+                OnModal(1);
             }
         }
 
@@ -105,17 +117,27 @@ namespace ViewsLayer
         {
             try
             {
-               
+                OracleExecute("D");
+
+                CargarTabla();
             }
             catch (Exception ex)
             {
-                
+                informar(ex.Message);
             }
+        }
+
+        private String OracleExecute(string op)
+        {
+            String result = "";
+            result = Ws.MaintenanceEmpresa(this.txtEMPRESA.Text, this.txtNOMBRE.Text, this.txtUBICACION.Text, this.txtEMAIL.Text,
+                                           this.txtTELEFONO.Text, op);
+            Ws.Close();
+            return result;
         }
 
         protected void btnSempleadoAgregar_Click(object sender, EventArgs e)
         {
-
         }
     }
 }
