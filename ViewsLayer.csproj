@@ -148,6 +148,7 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="WebFormClientes.aspx" />
     <Content Include="WebFormEmpleados.aspx" />
     <Content Include="WebFormEmpresa.aspx" />
     <None Include="Connected Services\ServiceReference\WebService.wsdl" />
@@ -320,6 +321,13 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebFormClientes.aspx.cs">
+      <DependentUpon>WebFormClientes.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebFormClientes.aspx.designer.cs">
+      <DependentUpon>WebFormClientes.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebFormEmpleados.aspx.cs">
       <DependentUpon>WebFormEmpleados.aspx</DependentUpon>
