@@ -107,6 +107,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="WebFormUsuarios.aspx" />
     <None Include="Connected Services\ServiceReference\WebService.disco" />
     <None Include="Connected Services\ServiceReference\configuration91.svcinfo" />
     <None Include="Connected Services\ServiceReference\configuration.svcinfo" />
@@ -421,6 +422,13 @@
     </Compile>
     <Compile Include="WebFormSucursal.aspx.designer.cs">
       <DependentUpon>WebFormSucursal.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebFormUsuarios.aspx.cs">
+      <DependentUpon>WebFormUsuarios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebFormUsuarios.aspx.designer.cs">
+      <DependentUpon>WebFormUsuarios.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
