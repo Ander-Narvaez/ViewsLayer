@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 
 namespace ViewsLayer
 {
-    public partial class WebFormSucursal : System.Web.UI.Page
+    public partial class WebFormEmpleados : System.Web.UI.Page
     {
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -19,7 +19,7 @@ namespace ViewsLayer
 
         }
 
-        protected void tblSucursal_SelectedIndexChanged(object sender, EventArgs e)
+        protected void tblEmpleados_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
