@@ -55,6 +55,9 @@
                         <li class="nav-item">
                             <a class="dropdown-item  text-primary" runat="server" href="WebFormEmpresa.aspx">Empresa</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="dropdown-item  text-primary" runat="server" href="WebFormSucursal.aspx">Sucursal</a>
+                        </li>
                     </ul>
                 </div>
             </div>
