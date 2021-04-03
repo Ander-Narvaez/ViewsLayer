@@ -255,6 +255,7 @@
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
     <Content Include="ViewSwitcher.ascx" />
+    <Content Include="WebFormInventario.aspx" />
     <Content Include="WebFormProveedores.aspx" />
     <Content Include="WebFormSucursal.aspx" />
     <Content Include="Web.config" />
@@ -359,6 +360,13 @@
     </Compile>
     <Compile Include="WebFormEmpresa.aspx.designer.cs">
       <DependentUpon>WebFormEmpresa.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebFormInventario.aspx.cs">
+      <DependentUpon>WebFormInventario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebFormInventario.aspx.designer.cs">
+      <DependentUpon>WebFormInventario.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebFormProveedores.aspx.cs">
       <DependentUpon>WebFormProveedores.aspx</DependentUpon>
