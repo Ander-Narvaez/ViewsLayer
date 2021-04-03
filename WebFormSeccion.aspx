@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="WebFormEstante.aspx.cs" Inherits="ViewsLayer.WebFormEstante" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="WebFormSeccion.aspx.cs" Inherits="ViewsLayer.WebForm1" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -17,7 +17,7 @@
     <div class="row mb-3 ">
         <div class="col-12 " style="left: 0px; top: 0px">
             <div class="col-form-label">
-                <h4>Lista de Estante</h4>
+                <h4>Lista de Seccion</h4>
                 <%-- Listar objetos--%>
             </div>
         </div>
@@ -31,7 +31,7 @@
         <div class="col-12 justify-content-center align-items-center p-4">
             <div class=" " style="width: 100%; height: 200px; overflow: scroll">
                 <%-- cambiar nombre de la tabla--%>
-                <asp:GridView ID="tbl" runat="server" CssClass="table table-hover table-responsive-sm " AutoGenerateSelectButton="True" Width="100%" EnablePersistedSelection="false" OnSelectedIndexChanged="tblEstante_SelectedIndexChanged">
+                <asp:GridView ID="tbl" runat="server" CssClass="table table-hover table-responsive-sm " AutoGenerateSelectButton="True" Width="100%" EnablePersistedSelection="false" OnSelectedIndexChanged="tblSeccion_SelectedIndexChanged">
                     <EditRowStyle CssClass="bg-warning" ForeColor="White" />
                     <EmptyDataRowStyle BorderStyle="Dotted" />
                     <SelectedRowStyle CssClass="bg-success" />
@@ -55,7 +55,7 @@
                 <div class="modal-content">
                     <div class="modal-header">
                         <%--CAMBIAR NOMBRE MODAL--%>
-                        <h5 class="modal-title" id="staticBackdropLabel">Registro Estante</h5>
+                        <h5 class="modal-title" id="staticBackdropLabel">Registro Seccion</h5>
                         <%-- Titulo del modal--%>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span>
@@ -95,16 +95,9 @@
                                 <div class="col-12 d-flex flex-column mt-3">
                                     <div class="d-flex">
                                         <asp:Label ID="lblseccion" runat="server" Text="Sección" CssClass="" ToolTip="" Width="100px"></asp:Label>
-                                        <asp:DropDownList ID="txtSECCION" runat="server" ReadOnly="true" CssClass="form-control ml-4"></asp:DropDownList>
+                                        <asp:TextBox ID="txtSECCION" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
                                     </div>
-                                </div>
-                                <%-- ESTANTE  --%>
-                                <div class="col-12 d-flex flex-column mt-3">
-                                    <div class="d-flex">
-                                        <asp:Label ID="lblestante" runat="server" Text="Estante" CssClass="" ToolTip="" Width="100px"></asp:Label>
-                                        <asp:TextBox ID="txtESTANTE" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
-                                    </div>
-                                </div>
+                                </div>                              
                                 <%-- DESCRIPCION --%>
                                 <div class="col-12 d-flex flex-column mt-3">
                                     <div class="d-flex">
