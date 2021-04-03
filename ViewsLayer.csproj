@@ -148,6 +148,7 @@
     <Content Include="Content\bootstrap-reboot.css.map" />
     <Content Include="Content\bootstrap-grid.min.css.map" />
     <Content Include="Content\bootstrap-grid.css.map" />
+    <Content Include="WebFormSeccion.aspx" />
     <Content Include="WebFormArticulo.aspx" />
     <Content Include="WebFormBodega.aspx" />
     <Content Include="WebFormCategoria_Articulo.aspx" />
@@ -327,6 +328,13 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="WebFormSeccion.aspx.cs">
+      <DependentUpon>WebFormSeccion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WebFormSeccion.aspx.designer.cs">
+      <DependentUpon>WebFormSeccion.aspx</DependentUpon>
     </Compile>
     <Compile Include="WebFormArticulo.aspx.cs">
       <DependentUpon>WebFormArticulo.aspx</DependentUpon>

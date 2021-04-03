@@ -11,7 +11,7 @@ namespace ViewsLayer
 {
 
 
-    public partial class WebFormEstante
+    public partial class WebForm1
     {
 
         /// <summary>
@@ -156,25 +156,7 @@ namespace ViewsLayer
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList txtSECCION;
-
-        /// <summary>
-        /// Control lblestante.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblestante;
-
-        /// <summary>
-        /// Control txtESTANTE.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtESTANTE;
+        protected global::System.Web.UI.WebControls.TextBox txtSECCION;
 
         /// <summary>
         /// Control lbldescripcion.
