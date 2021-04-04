@@ -16,19 +16,201 @@ namespace ViewsLayer.ServiceReference {
     [System.ServiceModel.ServiceContractAttribute(ConfigurationName="ServiceReference.WebServiceSoap")]
     public interface WebServiceSoap {
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaintenanceEmpresa", ReplyAction="*")]
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaintenanceEmpresa1", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        string MaintenanceEmpresa(string pID_COMPAÑIA, string pNOMBRE, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION);
+        string MaintenanceEmpresa1(string pEMPRESA, string pNOMBRE, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION);
         
-        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaintenanceEmpresa", ReplyAction="*")]
-        System.Threading.Tasks.Task<string> MaintenanceEmpresaAsync(string pID_COMPAÑIA, string pNOMBRE, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION);
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaintenanceEmpresa1", ReplyAction="*")]
+        System.Threading.Tasks.Task<string> MaintenanceEmpresa1Async(string pEMPRESA, string pNOMBRE, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListEmpresa", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet GetListEmpresa(string pID_COMPAÑIA, string pNOMBRE, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION);
+        System.Data.DataSet GetListEmpresa(string pEMPRESA, string pNOMBRE, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListEmpresa", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> GetListEmpresaAsync(string pID_COMPAÑIA, string pNOMBRE, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION);
+        System.Threading.Tasks.Task<System.Data.DataSet> GetListEmpresaAsync(string pEMPRESA, string pNOMBRE, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaintenanceArticulo", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        string MaintenanceArticulo(string pARTICULO, string pCATEGORIA, decimal pPRECIO, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaintenanceArticulo", ReplyAction="*")]
+        System.Threading.Tasks.Task<string> MaintenanceArticuloAsync(string pARTICULO, string pCATEGORIA, decimal pPRECIO, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListArticulo", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet GetListArticulo(string pARTICULO, string pCATEGORIA, decimal pPRECIO, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListArticulo", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> GetListArticuloAsync(string pARTICULO, string pCATEGORIA, decimal pPRECIO, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaintenanceCategoria_Articulo", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        string MaintenanceCategoria_Articulo(string pCODIGO, string pDESCRIPCION, int pIMPUESTO, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaintenanceCategoria_Articulo", ReplyAction="*")]
+        System.Threading.Tasks.Task<string> MaintenanceCategoria_ArticuloAsync(string pCODIGO, string pDESCRIPCION, int pIMPUESTO, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListCategoria_articulo", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet GetListCategoria_articulo(string pCODIGO, string pDESCRIPCION, int pIMPUESTO, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListCategoria_articulo", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> GetListCategoria_articuloAsync(string pCODIGO, string pDESCRIPCION, int pIMPUESTO, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaintenanceInventario", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        string MaintenanceInventario(string pEMPRESA, string pSUCURSAL, string pPROVEEDOR, int pINVENTARIO, string pARTICULO, int pMAXIMOS, int pMINIMOS, int pEXISTENCIAS, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaintenanceInventario", ReplyAction="*")]
+        System.Threading.Tasks.Task<string> MaintenanceInventarioAsync(string pEMPRESA, string pSUCURSAL, string pPROVEEDOR, int pINVENTARIO, string pARTICULO, int pMAXIMOS, int pMINIMOS, int pEXISTENCIAS, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListInventario", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet GetListInventario(string pEMPRESA, string pSUCURSAL, string pPROVEEDOR, int pINVENTARIO, string pARTICULO, int pMAXIMOS, int pMINIMOS, int pEXISTENCIAS, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListInventario", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> GetListInventarioAsync(string pEMPRESA, string pSUCURSAL, string pPROVEEDOR, int pINVENTARIO, string pARTICULO, int pMAXIMOS, int pMINIMOS, int pEXISTENCIAS, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaintenanceClientes", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        string MaintenanceClientes(string pCEDULA, string pNOMBRE, string pAPELLIDO_1, string pAPELLIDO_2, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaintenanceClientes", ReplyAction="*")]
+        System.Threading.Tasks.Task<string> MaintenanceClientesAsync(string pCEDULA, string pNOMBRE, string pAPELLIDO_1, string pAPELLIDO_2, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListClientes", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet GetListClientes(string pCEDULA, string pNOMBRE, string pAPELLIDO_1, string pAPELLIDO_2, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListClientes", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> GetListClientesAsync(string pCEDULA, string pNOMBRE, string pAPELLIDO_1, string pAPELLIDO_2, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaintenanceBodega", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        string MaintenanceBodega(string pEMPRESA, string pSUCURSAL, string pBODEGA, int pINVENTARIO, string pNOMBRE, string pUBICACION, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaintenanceBodega", ReplyAction="*")]
+        System.Threading.Tasks.Task<string> MaintenanceBodegaAsync(string pEMPRESA, string pSUCURSAL, string pBODEGA, int pINVENTARIO, string pNOMBRE, string pUBICACION, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListBodega", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet GetListBodega(string pEMPRESA, string pSUCURSAL, string pBODEGA, int pINVENTARIO, string pNOMBRE, string pUBICACION, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListBodega", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> GetListBodegaAsync(string pEMPRESA, string pSUCURSAL, string pBODEGA, int pINVENTARIO, string pNOMBRE, string pUBICACION, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaintenanceFactura", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        string MaintenanceFactura(string pEMPRESA, string pSUCURSAL, int pFACTURA, string pCLIENTE, string pEMPLEADO, System.DateTime pFECHA, string pESTADO, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaintenanceFactura", ReplyAction="*")]
+        System.Threading.Tasks.Task<string> MaintenanceFacturaAsync(string pEMPRESA, string pSUCURSAL, int pFACTURA, string pCLIENTE, string pEMPLEADO, System.DateTime pFECHA, string pESTADO, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListFactura", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet GetListFactura(string pEMPRESA, string pSUCURSAL, int pFACTURA, string pCLIENTE, string pEMPLEADO, System.DateTime pFECHA, string pESTADO, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListFactura", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> GetListFacturaAsync(string pEMPRESA, string pSUCURSAL, int pFACTURA, string pCLIENTE, string pEMPLEADO, System.DateTime pFECHA, string pESTADO, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaintenanceProveedores", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        string MaintenanceProveedores(string pID_EMPRESA, string pID_SUCURSAL, string pCEDULA_JURIDICA, string pRAZON_SOCIAL, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaintenanceProveedores", ReplyAction="*")]
+        System.Threading.Tasks.Task<string> MaintenanceProveedoresAsync(string pID_EMPRESA, string pID_SUCURSAL, string pCEDULA_JURIDICA, string pRAZON_SOCIAL, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListProveedores", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet GetListProveedores(string pID_EMPRESA, string pID_SUCURSAL, string pCEDULA_JURIDICA, string pRAZON_SOCIAL, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListProveedores", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> GetListProveedoresAsync(string pID_EMPRESA, string pID_SUCURSAL, string pCEDULA_JURIDICA, string pRAZON_SOCIAL, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaintenanceDetalle_Factura", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        string MaintenanceDetalle_Factura(string pID_EMPRESA, string pID_SUCURSAL, int pNUM_LINEA, int pFACTURA, string pARTICULO, int pCANTIDAD, int pIMPUESTO, int pDESCUENTO, int pTOTAL, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaintenanceDetalle_Factura", ReplyAction="*")]
+        System.Threading.Tasks.Task<string> MaintenanceDetalle_FacturaAsync(string pID_EMPRESA, string pID_SUCURSAL, int pNUM_LINEA, int pFACTURA, string pARTICULO, int pCANTIDAD, int pIMPUESTO, int pDESCUENTO, int pTOTAL, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListDetalle_Factura", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet GetListDetalle_Factura(string pID_EMPRESA, string pID_SUCURSAL, int pNUM_LINEA, int pFACTURA, string pARTICULO, int pCANTIDAD, int pIMPUESTO, int pDESCUENTO, int pTOTAL, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListDetalle_Factura", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> GetListDetalle_FacturaAsync(string pID_EMPRESA, string pID_SUCURSAL, int pNUM_LINEA, int pFACTURA, string pARTICULO, int pCANTIDAD, int pIMPUESTO, int pDESCUENTO, int pTOTAL, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaintenanceEmpleados", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        string MaintenanceEmpleados(string pEMPRESA, string pSUCURSAL, string pCEDULA, string pNOMBRE, string pAPELLIDOS, string pEMAIL, int pTELEFONO, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaintenanceEmpleados", ReplyAction="*")]
+        System.Threading.Tasks.Task<string> MaintenanceEmpleadosAsync(string pEMPRESA, string pSUCURSAL, string pCEDULA, string pNOMBRE, string pAPELLIDOS, string pEMAIL, int pTELEFONO, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListEmpleados", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet GetListEmpleados(string pEMPRESA, string pSUCURSAL, string pCEDULA, string pNOMBRE, string pAPELLIDOS, string pEMAIL, int pTELEFONO, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListEmpleados", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> GetListEmpleadosAsync(string pEMPRESA, string pSUCURSAL, string pCEDULA, string pNOMBRE, string pAPELLIDOS, string pEMAIL, int pTELEFONO, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaintenanceUsuarios", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        string MaintenanceUsuarios(string pEMPRESA, string pSUCURSAL, int pID, string pUSUARIO, string pCONTRA, string pTIPO, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaintenanceUsuarios", ReplyAction="*")]
+        System.Threading.Tasks.Task<string> MaintenanceUsuariosAsync(string pEMPRESA, string pSUCURSAL, int pID, string pUSUARIO, string pCONTRA, string pTIPO, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListUsuarios", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet GetListUsuarios(string pEMPRESA, string pSUCURSAL, int pID, string pUSUARIO, string pCONTRA, string pTIPO, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListUsuarios", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> GetListUsuariosAsync(string pEMPRESA, string pSUCURSAL, int pID, string pUSUARIO, string pCONTRA, string pTIPO, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaintenanceCarde_Movimiento", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        string MaintenanceCarde_Movimiento(string pEMPRESA, string pSUCURSAL, string pUSUARIO, int pMOVIMIENTO, int pINVENTARIO, string pTIPO, int pCANTIDAD_EXISTENTE, int pCANTIDAD, System.DateTime pFECHA_HORA, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaintenanceCarde_Movimiento", ReplyAction="*")]
+        System.Threading.Tasks.Task<string> MaintenanceCarde_MovimientoAsync(string pEMPRESA, string pSUCURSAL, string pUSUARIO, int pMOVIMIENTO, int pINVENTARIO, string pTIPO, int pCANTIDAD_EXISTENTE, int pCANTIDAD, System.DateTime pFECHA_HORA, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListCarde_Movimiento", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet GetListCarde_Movimiento(string pEMPRESA, string pSUCURSAL, string pUSUARIO, int pMOVIMIENTO, int pINVENTARIO, string pTIPO, int pCANTIDAD_EXISTENTE, int pCANTIDAD, System.DateTime pFECHA_HORA, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListCarde_Movimiento", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> GetListCarde_MovimientoAsync(string pEMPRESA, string pSUCURSAL, string pUSUARIO, int pMOVIMIENTO, int pINVENTARIO, string pTIPO, int pCANTIDAD_EXISTENTE, int pCANTIDAD, System.DateTime pFECHA_HORA, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaintenanceEstante", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        string MaintenanceEstante(string pEMPRESA, string pSUCURSAL, string pBODEGA, string pSECCION, string pESTANTE, string pDESCRIPCION, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaintenanceEstante", ReplyAction="*")]
+        System.Threading.Tasks.Task<string> MaintenanceEstanteAsync(string pEMPRESA, string pSUCURSAL, string pBODEGA, string pSECCION, string pESTANTE, string pDESCRIPCION, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListEstante", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet GetListEstante(string pEMPRESA, string pSUCURSAL, string pBODEGA, string pSECCION, string pESTANTE, string pDESCRIPCION, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListEstante", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> GetListEstanteAsync(string pEMPRESA, string pSUCURSAL, string pBODEGA, string pSECCION, string pESTANTE, string pDESCRIPCION, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaintenanceSeccion", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        string MaintenanceSeccion(string pEMPRESA, string pSUCURSAL, string pBODEGA, string pSECCION, string pDESCRIPCION, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaintenanceSeccion", ReplyAction="*")]
+        System.Threading.Tasks.Task<string> MaintenanceSeccionAsync(string pEMPRESA, string pSUCURSAL, string pBODEGA, string pSECCION, string pDESCRIPCION, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListSeccion", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet GetListSeccion(string pEMPRESA, string pSUCURSAL, string pBODEGA, string pSECCION, string pDESCRIPCION, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListSeccion", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> GetListSeccionAsync(string pEMPRESA, string pSUCURSAL, string pBODEGA, string pSECCION, string pDESCRIPCION, string pACCION);
     }
     
     [System.CodeDom.Compiler.GeneratedCodeAttribute("System.ServiceModel", "4.0.0.0")]
@@ -58,20 +240,228 @@ namespace ViewsLayer.ServiceReference {
                 base(binding, remoteAddress) {
         }
         
-        public string MaintenanceEmpresa(string pID_COMPAÑIA, string pNOMBRE, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION) {
-            return base.Channel.MaintenanceEmpresa(pID_COMPAÑIA, pNOMBRE, pUBICACION, pEMAIL, pTELEFONO, pACCION);
+        public string MaintenanceEmpresa1(string pEMPRESA, string pNOMBRE, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION) {
+            return base.Channel.MaintenanceEmpresa1(pEMPRESA, pNOMBRE, pUBICACION, pEMAIL, pTELEFONO, pACCION);
         }
         
-        public System.Threading.Tasks.Task<string> MaintenanceEmpresaAsync(string pID_COMPAÑIA, string pNOMBRE, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION) {
-            return base.Channel.MaintenanceEmpresaAsync(pID_COMPAÑIA, pNOMBRE, pUBICACION, pEMAIL, pTELEFONO, pACCION);
+        public System.Threading.Tasks.Task<string> MaintenanceEmpresa1Async(string pEMPRESA, string pNOMBRE, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION) {
+            return base.Channel.MaintenanceEmpresa1Async(pEMPRESA, pNOMBRE, pUBICACION, pEMAIL, pTELEFONO, pACCION);
         }
         
-        public System.Data.DataSet GetListEmpresa(string pID_COMPAÑIA, string pNOMBRE, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION) {
-            return base.Channel.GetListEmpresa(pID_COMPAÑIA, pNOMBRE, pUBICACION, pEMAIL, pTELEFONO, pACCION);
+        public System.Data.DataSet GetListEmpresa(string pEMPRESA, string pNOMBRE, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION) {
+            return base.Channel.GetListEmpresa(pEMPRESA, pNOMBRE, pUBICACION, pEMAIL, pTELEFONO, pACCION);
         }
         
-        public System.Threading.Tasks.Task<System.Data.DataSet> GetListEmpresaAsync(string pID_COMPAÑIA, string pNOMBRE, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION) {
-            return base.Channel.GetListEmpresaAsync(pID_COMPAÑIA, pNOMBRE, pUBICACION, pEMAIL, pTELEFONO, pACCION);
+        public System.Threading.Tasks.Task<System.Data.DataSet> GetListEmpresaAsync(string pEMPRESA, string pNOMBRE, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION) {
+            return base.Channel.GetListEmpresaAsync(pEMPRESA, pNOMBRE, pUBICACION, pEMAIL, pTELEFONO, pACCION);
+        }
+        
+        public string MaintenanceArticulo(string pARTICULO, string pCATEGORIA, decimal pPRECIO, string pACCION) {
+            return base.Channel.MaintenanceArticulo(pARTICULO, pCATEGORIA, pPRECIO, pACCION);
+        }
+        
+        public System.Threading.Tasks.Task<string> MaintenanceArticuloAsync(string pARTICULO, string pCATEGORIA, decimal pPRECIO, string pACCION) {
+            return base.Channel.MaintenanceArticuloAsync(pARTICULO, pCATEGORIA, pPRECIO, pACCION);
+        }
+        
+        public System.Data.DataSet GetListArticulo(string pARTICULO, string pCATEGORIA, decimal pPRECIO, string pACCION) {
+            return base.Channel.GetListArticulo(pARTICULO, pCATEGORIA, pPRECIO, pACCION);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> GetListArticuloAsync(string pARTICULO, string pCATEGORIA, decimal pPRECIO, string pACCION) {
+            return base.Channel.GetListArticuloAsync(pARTICULO, pCATEGORIA, pPRECIO, pACCION);
+        }
+        
+        public string MaintenanceCategoria_Articulo(string pCODIGO, string pDESCRIPCION, int pIMPUESTO, string pACCION) {
+            return base.Channel.MaintenanceCategoria_Articulo(pCODIGO, pDESCRIPCION, pIMPUESTO, pACCION);
+        }
+        
+        public System.Threading.Tasks.Task<string> MaintenanceCategoria_ArticuloAsync(string pCODIGO, string pDESCRIPCION, int pIMPUESTO, string pACCION) {
+            return base.Channel.MaintenanceCategoria_ArticuloAsync(pCODIGO, pDESCRIPCION, pIMPUESTO, pACCION);
+        }
+        
+        public System.Data.DataSet GetListCategoria_articulo(string pCODIGO, string pDESCRIPCION, int pIMPUESTO, string pACCION) {
+            return base.Channel.GetListCategoria_articulo(pCODIGO, pDESCRIPCION, pIMPUESTO, pACCION);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> GetListCategoria_articuloAsync(string pCODIGO, string pDESCRIPCION, int pIMPUESTO, string pACCION) {
+            return base.Channel.GetListCategoria_articuloAsync(pCODIGO, pDESCRIPCION, pIMPUESTO, pACCION);
+        }
+        
+        public string MaintenanceInventario(string pEMPRESA, string pSUCURSAL, string pPROVEEDOR, int pINVENTARIO, string pARTICULO, int pMAXIMOS, int pMINIMOS, int pEXISTENCIAS, string pACCION) {
+            return base.Channel.MaintenanceInventario(pEMPRESA, pSUCURSAL, pPROVEEDOR, pINVENTARIO, pARTICULO, pMAXIMOS, pMINIMOS, pEXISTENCIAS, pACCION);
+        }
+        
+        public System.Threading.Tasks.Task<string> MaintenanceInventarioAsync(string pEMPRESA, string pSUCURSAL, string pPROVEEDOR, int pINVENTARIO, string pARTICULO, int pMAXIMOS, int pMINIMOS, int pEXISTENCIAS, string pACCION) {
+            return base.Channel.MaintenanceInventarioAsync(pEMPRESA, pSUCURSAL, pPROVEEDOR, pINVENTARIO, pARTICULO, pMAXIMOS, pMINIMOS, pEXISTENCIAS, pACCION);
+        }
+        
+        public System.Data.DataSet GetListInventario(string pEMPRESA, string pSUCURSAL, string pPROVEEDOR, int pINVENTARIO, string pARTICULO, int pMAXIMOS, int pMINIMOS, int pEXISTENCIAS, string pACCION) {
+            return base.Channel.GetListInventario(pEMPRESA, pSUCURSAL, pPROVEEDOR, pINVENTARIO, pARTICULO, pMAXIMOS, pMINIMOS, pEXISTENCIAS, pACCION);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> GetListInventarioAsync(string pEMPRESA, string pSUCURSAL, string pPROVEEDOR, int pINVENTARIO, string pARTICULO, int pMAXIMOS, int pMINIMOS, int pEXISTENCIAS, string pACCION) {
+            return base.Channel.GetListInventarioAsync(pEMPRESA, pSUCURSAL, pPROVEEDOR, pINVENTARIO, pARTICULO, pMAXIMOS, pMINIMOS, pEXISTENCIAS, pACCION);
+        }
+        
+        public string MaintenanceClientes(string pCEDULA, string pNOMBRE, string pAPELLIDO_1, string pAPELLIDO_2, string pACCION) {
+            return base.Channel.MaintenanceClientes(pCEDULA, pNOMBRE, pAPELLIDO_1, pAPELLIDO_2, pACCION);
+        }
+        
+        public System.Threading.Tasks.Task<string> MaintenanceClientesAsync(string pCEDULA, string pNOMBRE, string pAPELLIDO_1, string pAPELLIDO_2, string pACCION) {
+            return base.Channel.MaintenanceClientesAsync(pCEDULA, pNOMBRE, pAPELLIDO_1, pAPELLIDO_2, pACCION);
+        }
+        
+        public System.Data.DataSet GetListClientes(string pCEDULA, string pNOMBRE, string pAPELLIDO_1, string pAPELLIDO_2, string pACCION) {
+            return base.Channel.GetListClientes(pCEDULA, pNOMBRE, pAPELLIDO_1, pAPELLIDO_2, pACCION);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> GetListClientesAsync(string pCEDULA, string pNOMBRE, string pAPELLIDO_1, string pAPELLIDO_2, string pACCION) {
+            return base.Channel.GetListClientesAsync(pCEDULA, pNOMBRE, pAPELLIDO_1, pAPELLIDO_2, pACCION);
+        }
+        
+        public string MaintenanceBodega(string pEMPRESA, string pSUCURSAL, string pBODEGA, int pINVENTARIO, string pNOMBRE, string pUBICACION, string pACCION) {
+            return base.Channel.MaintenanceBodega(pEMPRESA, pSUCURSAL, pBODEGA, pINVENTARIO, pNOMBRE, pUBICACION, pACCION);
+        }
+        
+        public System.Threading.Tasks.Task<string> MaintenanceBodegaAsync(string pEMPRESA, string pSUCURSAL, string pBODEGA, int pINVENTARIO, string pNOMBRE, string pUBICACION, string pACCION) {
+            return base.Channel.MaintenanceBodegaAsync(pEMPRESA, pSUCURSAL, pBODEGA, pINVENTARIO, pNOMBRE, pUBICACION, pACCION);
+        }
+        
+        public System.Data.DataSet GetListBodega(string pEMPRESA, string pSUCURSAL, string pBODEGA, int pINVENTARIO, string pNOMBRE, string pUBICACION, string pACCION) {
+            return base.Channel.GetListBodega(pEMPRESA, pSUCURSAL, pBODEGA, pINVENTARIO, pNOMBRE, pUBICACION, pACCION);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> GetListBodegaAsync(string pEMPRESA, string pSUCURSAL, string pBODEGA, int pINVENTARIO, string pNOMBRE, string pUBICACION, string pACCION) {
+            return base.Channel.GetListBodegaAsync(pEMPRESA, pSUCURSAL, pBODEGA, pINVENTARIO, pNOMBRE, pUBICACION, pACCION);
+        }
+        
+        public string MaintenanceFactura(string pEMPRESA, string pSUCURSAL, int pFACTURA, string pCLIENTE, string pEMPLEADO, System.DateTime pFECHA, string pESTADO, string pACCION) {
+            return base.Channel.MaintenanceFactura(pEMPRESA, pSUCURSAL, pFACTURA, pCLIENTE, pEMPLEADO, pFECHA, pESTADO, pACCION);
+        }
+        
+        public System.Threading.Tasks.Task<string> MaintenanceFacturaAsync(string pEMPRESA, string pSUCURSAL, int pFACTURA, string pCLIENTE, string pEMPLEADO, System.DateTime pFECHA, string pESTADO, string pACCION) {
+            return base.Channel.MaintenanceFacturaAsync(pEMPRESA, pSUCURSAL, pFACTURA, pCLIENTE, pEMPLEADO, pFECHA, pESTADO, pACCION);
+        }
+        
+        public System.Data.DataSet GetListFactura(string pEMPRESA, string pSUCURSAL, int pFACTURA, string pCLIENTE, string pEMPLEADO, System.DateTime pFECHA, string pESTADO, string pACCION) {
+            return base.Channel.GetListFactura(pEMPRESA, pSUCURSAL, pFACTURA, pCLIENTE, pEMPLEADO, pFECHA, pESTADO, pACCION);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> GetListFacturaAsync(string pEMPRESA, string pSUCURSAL, int pFACTURA, string pCLIENTE, string pEMPLEADO, System.DateTime pFECHA, string pESTADO, string pACCION) {
+            return base.Channel.GetListFacturaAsync(pEMPRESA, pSUCURSAL, pFACTURA, pCLIENTE, pEMPLEADO, pFECHA, pESTADO, pACCION);
+        }
+        
+        public string MaintenanceProveedores(string pID_EMPRESA, string pID_SUCURSAL, string pCEDULA_JURIDICA, string pRAZON_SOCIAL, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION) {
+            return base.Channel.MaintenanceProveedores(pID_EMPRESA, pID_SUCURSAL, pCEDULA_JURIDICA, pRAZON_SOCIAL, pUBICACION, pEMAIL, pTELEFONO, pACCION);
+        }
+        
+        public System.Threading.Tasks.Task<string> MaintenanceProveedoresAsync(string pID_EMPRESA, string pID_SUCURSAL, string pCEDULA_JURIDICA, string pRAZON_SOCIAL, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION) {
+            return base.Channel.MaintenanceProveedoresAsync(pID_EMPRESA, pID_SUCURSAL, pCEDULA_JURIDICA, pRAZON_SOCIAL, pUBICACION, pEMAIL, pTELEFONO, pACCION);
+        }
+        
+        public System.Data.DataSet GetListProveedores(string pID_EMPRESA, string pID_SUCURSAL, string pCEDULA_JURIDICA, string pRAZON_SOCIAL, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION) {
+            return base.Channel.GetListProveedores(pID_EMPRESA, pID_SUCURSAL, pCEDULA_JURIDICA, pRAZON_SOCIAL, pUBICACION, pEMAIL, pTELEFONO, pACCION);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> GetListProveedoresAsync(string pID_EMPRESA, string pID_SUCURSAL, string pCEDULA_JURIDICA, string pRAZON_SOCIAL, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION) {
+            return base.Channel.GetListProveedoresAsync(pID_EMPRESA, pID_SUCURSAL, pCEDULA_JURIDICA, pRAZON_SOCIAL, pUBICACION, pEMAIL, pTELEFONO, pACCION);
+        }
+        
+        public string MaintenanceDetalle_Factura(string pID_EMPRESA, string pID_SUCURSAL, int pNUM_LINEA, int pFACTURA, string pARTICULO, int pCANTIDAD, int pIMPUESTO, int pDESCUENTO, int pTOTAL, string pACCION) {
+            return base.Channel.MaintenanceDetalle_Factura(pID_EMPRESA, pID_SUCURSAL, pNUM_LINEA, pFACTURA, pARTICULO, pCANTIDAD, pIMPUESTO, pDESCUENTO, pTOTAL, pACCION);
+        }
+        
+        public System.Threading.Tasks.Task<string> MaintenanceDetalle_FacturaAsync(string pID_EMPRESA, string pID_SUCURSAL, int pNUM_LINEA, int pFACTURA, string pARTICULO, int pCANTIDAD, int pIMPUESTO, int pDESCUENTO, int pTOTAL, string pACCION) {
+            return base.Channel.MaintenanceDetalle_FacturaAsync(pID_EMPRESA, pID_SUCURSAL, pNUM_LINEA, pFACTURA, pARTICULO, pCANTIDAD, pIMPUESTO, pDESCUENTO, pTOTAL, pACCION);
+        }
+        
+        public System.Data.DataSet GetListDetalle_Factura(string pID_EMPRESA, string pID_SUCURSAL, int pNUM_LINEA, int pFACTURA, string pARTICULO, int pCANTIDAD, int pIMPUESTO, int pDESCUENTO, int pTOTAL, string pACCION) {
+            return base.Channel.GetListDetalle_Factura(pID_EMPRESA, pID_SUCURSAL, pNUM_LINEA, pFACTURA, pARTICULO, pCANTIDAD, pIMPUESTO, pDESCUENTO, pTOTAL, pACCION);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> GetListDetalle_FacturaAsync(string pID_EMPRESA, string pID_SUCURSAL, int pNUM_LINEA, int pFACTURA, string pARTICULO, int pCANTIDAD, int pIMPUESTO, int pDESCUENTO, int pTOTAL, string pACCION) {
+            return base.Channel.GetListDetalle_FacturaAsync(pID_EMPRESA, pID_SUCURSAL, pNUM_LINEA, pFACTURA, pARTICULO, pCANTIDAD, pIMPUESTO, pDESCUENTO, pTOTAL, pACCION);
+        }
+        
+        public string MaintenanceEmpleados(string pEMPRESA, string pSUCURSAL, string pCEDULA, string pNOMBRE, string pAPELLIDOS, string pEMAIL, int pTELEFONO, string pACCION) {
+            return base.Channel.MaintenanceEmpleados(pEMPRESA, pSUCURSAL, pCEDULA, pNOMBRE, pAPELLIDOS, pEMAIL, pTELEFONO, pACCION);
+        }
+        
+        public System.Threading.Tasks.Task<string> MaintenanceEmpleadosAsync(string pEMPRESA, string pSUCURSAL, string pCEDULA, string pNOMBRE, string pAPELLIDOS, string pEMAIL, int pTELEFONO, string pACCION) {
+            return base.Channel.MaintenanceEmpleadosAsync(pEMPRESA, pSUCURSAL, pCEDULA, pNOMBRE, pAPELLIDOS, pEMAIL, pTELEFONO, pACCION);
+        }
+        
+        public System.Data.DataSet GetListEmpleados(string pEMPRESA, string pSUCURSAL, string pCEDULA, string pNOMBRE, string pAPELLIDOS, string pEMAIL, int pTELEFONO, string pACCION) {
+            return base.Channel.GetListEmpleados(pEMPRESA, pSUCURSAL, pCEDULA, pNOMBRE, pAPELLIDOS, pEMAIL, pTELEFONO, pACCION);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> GetListEmpleadosAsync(string pEMPRESA, string pSUCURSAL, string pCEDULA, string pNOMBRE, string pAPELLIDOS, string pEMAIL, int pTELEFONO, string pACCION) {
+            return base.Channel.GetListEmpleadosAsync(pEMPRESA, pSUCURSAL, pCEDULA, pNOMBRE, pAPELLIDOS, pEMAIL, pTELEFONO, pACCION);
+        }
+        
+        public string MaintenanceUsuarios(string pEMPRESA, string pSUCURSAL, int pID, string pUSUARIO, string pCONTRA, string pTIPO, string pACCION) {
+            return base.Channel.MaintenanceUsuarios(pEMPRESA, pSUCURSAL, pID, pUSUARIO, pCONTRA, pTIPO, pACCION);
+        }
+        
+        public System.Threading.Tasks.Task<string> MaintenanceUsuariosAsync(string pEMPRESA, string pSUCURSAL, int pID, string pUSUARIO, string pCONTRA, string pTIPO, string pACCION) {
+            return base.Channel.MaintenanceUsuariosAsync(pEMPRESA, pSUCURSAL, pID, pUSUARIO, pCONTRA, pTIPO, pACCION);
+        }
+        
+        public System.Data.DataSet GetListUsuarios(string pEMPRESA, string pSUCURSAL, int pID, string pUSUARIO, string pCONTRA, string pTIPO, string pACCION) {
+            return base.Channel.GetListUsuarios(pEMPRESA, pSUCURSAL, pID, pUSUARIO, pCONTRA, pTIPO, pACCION);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> GetListUsuariosAsync(string pEMPRESA, string pSUCURSAL, int pID, string pUSUARIO, string pCONTRA, string pTIPO, string pACCION) {
+            return base.Channel.GetListUsuariosAsync(pEMPRESA, pSUCURSAL, pID, pUSUARIO, pCONTRA, pTIPO, pACCION);
+        }
+        
+        public string MaintenanceCarde_Movimiento(string pEMPRESA, string pSUCURSAL, string pUSUARIO, int pMOVIMIENTO, int pINVENTARIO, string pTIPO, int pCANTIDAD_EXISTENTE, int pCANTIDAD, System.DateTime pFECHA_HORA, string pACCION) {
+            return base.Channel.MaintenanceCarde_Movimiento(pEMPRESA, pSUCURSAL, pUSUARIO, pMOVIMIENTO, pINVENTARIO, pTIPO, pCANTIDAD_EXISTENTE, pCANTIDAD, pFECHA_HORA, pACCION);
+        }
+        
+        public System.Threading.Tasks.Task<string> MaintenanceCarde_MovimientoAsync(string pEMPRESA, string pSUCURSAL, string pUSUARIO, int pMOVIMIENTO, int pINVENTARIO, string pTIPO, int pCANTIDAD_EXISTENTE, int pCANTIDAD, System.DateTime pFECHA_HORA, string pACCION) {
+            return base.Channel.MaintenanceCarde_MovimientoAsync(pEMPRESA, pSUCURSAL, pUSUARIO, pMOVIMIENTO, pINVENTARIO, pTIPO, pCANTIDAD_EXISTENTE, pCANTIDAD, pFECHA_HORA, pACCION);
+        }
+        
+        public System.Data.DataSet GetListCarde_Movimiento(string pEMPRESA, string pSUCURSAL, string pUSUARIO, int pMOVIMIENTO, int pINVENTARIO, string pTIPO, int pCANTIDAD_EXISTENTE, int pCANTIDAD, System.DateTime pFECHA_HORA, string pACCION) {
+            return base.Channel.GetListCarde_Movimiento(pEMPRESA, pSUCURSAL, pUSUARIO, pMOVIMIENTO, pINVENTARIO, pTIPO, pCANTIDAD_EXISTENTE, pCANTIDAD, pFECHA_HORA, pACCION);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> GetListCarde_MovimientoAsync(string pEMPRESA, string pSUCURSAL, string pUSUARIO, int pMOVIMIENTO, int pINVENTARIO, string pTIPO, int pCANTIDAD_EXISTENTE, int pCANTIDAD, System.DateTime pFECHA_HORA, string pACCION) {
+            return base.Channel.GetListCarde_MovimientoAsync(pEMPRESA, pSUCURSAL, pUSUARIO, pMOVIMIENTO, pINVENTARIO, pTIPO, pCANTIDAD_EXISTENTE, pCANTIDAD, pFECHA_HORA, pACCION);
+        }
+        
+        public string MaintenanceEstante(string pEMPRESA, string pSUCURSAL, string pBODEGA, string pSECCION, string pESTANTE, string pDESCRIPCION, string pACCION) {
+            return base.Channel.MaintenanceEstante(pEMPRESA, pSUCURSAL, pBODEGA, pSECCION, pESTANTE, pDESCRIPCION, pACCION);
+        }
+        
+        public System.Threading.Tasks.Task<string> MaintenanceEstanteAsync(string pEMPRESA, string pSUCURSAL, string pBODEGA, string pSECCION, string pESTANTE, string pDESCRIPCION, string pACCION) {
+            return base.Channel.MaintenanceEstanteAsync(pEMPRESA, pSUCURSAL, pBODEGA, pSECCION, pESTANTE, pDESCRIPCION, pACCION);
+        }
+        
+        public System.Data.DataSet GetListEstante(string pEMPRESA, string pSUCURSAL, string pBODEGA, string pSECCION, string pESTANTE, string pDESCRIPCION, string pACCION) {
+            return base.Channel.GetListEstante(pEMPRESA, pSUCURSAL, pBODEGA, pSECCION, pESTANTE, pDESCRIPCION, pACCION);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> GetListEstanteAsync(string pEMPRESA, string pSUCURSAL, string pBODEGA, string pSECCION, string pESTANTE, string pDESCRIPCION, string pACCION) {
+            return base.Channel.GetListEstanteAsync(pEMPRESA, pSUCURSAL, pBODEGA, pSECCION, pESTANTE, pDESCRIPCION, pACCION);
+        }
+        
+        public string MaintenanceSeccion(string pEMPRESA, string pSUCURSAL, string pBODEGA, string pSECCION, string pDESCRIPCION, string pACCION) {
+            return base.Channel.MaintenanceSeccion(pEMPRESA, pSUCURSAL, pBODEGA, pSECCION, pDESCRIPCION, pACCION);
+        }
+        
+        public System.Threading.Tasks.Task<string> MaintenanceSeccionAsync(string pEMPRESA, string pSUCURSAL, string pBODEGA, string pSECCION, string pDESCRIPCION, string pACCION) {
+            return base.Channel.MaintenanceSeccionAsync(pEMPRESA, pSUCURSAL, pBODEGA, pSECCION, pDESCRIPCION, pACCION);
+        }
+        
+        public System.Data.DataSet GetListSeccion(string pEMPRESA, string pSUCURSAL, string pBODEGA, string pSECCION, string pDESCRIPCION, string pACCION) {
+            return base.Channel.GetListSeccion(pEMPRESA, pSUCURSAL, pBODEGA, pSECCION, pDESCRIPCION, pACCION);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> GetListSeccionAsync(string pEMPRESA, string pSUCURSAL, string pBODEGA, string pSECCION, string pDESCRIPCION, string pACCION) {
+            return base.Channel.GetListSeccionAsync(pEMPRESA, pSUCURSAL, pBODEGA, pSECCION, pDESCRIPCION, pACCION);
         }
     }
 }

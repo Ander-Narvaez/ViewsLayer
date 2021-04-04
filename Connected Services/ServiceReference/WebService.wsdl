@@ -2,10 +2,10 @@
 <wsdl:definitions xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
   <wsdl:types>
     <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
-      <s:element name="MaintenanceEmpresa">
+      <s:element name="MaintenanceEmpresa1">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="pID_COMPAÑIA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pEMPRESA" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="pNOMBRE" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="pUBICACION" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="pEMAIL" type="s:string" />
@@ -14,17 +14,17 @@
           </s:sequence>
         </s:complexType>
       </s:element>
-      <s:element name="MaintenanceEmpresaResponse">
+      <s:element name="MaintenanceEmpresa1Response">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="MaintenanceEmpresaResult" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="MaintenanceEmpresa1Result" type="s:string" />
           </s:sequence>
         </s:complexType>
       </s:element>
       <s:element name="GetListEmpresa">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="pID_COMPAÑIA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pEMPRESA" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="pNOMBRE" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="pUBICACION" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="pEMAIL" type="s:string" />
@@ -47,13 +47,628 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="MaintenanceArticulo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pARTICULO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pCATEGORIA" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pPRECIO" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="pACCION" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MaintenanceArticuloResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MaintenanceArticuloResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListArticulo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pARTICULO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pCATEGORIA" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pPRECIO" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="pACCION" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListArticuloResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListArticuloResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MaintenanceCategoria_Articulo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pCODIGO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pDESCRIPCION" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pIMPUESTO" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pACCION" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MaintenanceCategoria_ArticuloResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MaintenanceCategoria_ArticuloResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListCategoria_articulo">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pCODIGO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pDESCRIPCION" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pIMPUESTO" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pACCION" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListCategoria_articuloResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListCategoria_articuloResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MaintenanceInventario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pEMPRESA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSUCURSAL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPROVEEDOR" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pINVENTARIO" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pARTICULO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pMAXIMOS" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pMINIMOS" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pEXISTENCIAS" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pACCION" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MaintenanceInventarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MaintenanceInventarioResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListInventario">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pEMPRESA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSUCURSAL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pPROVEEDOR" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pINVENTARIO" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pARTICULO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pMAXIMOS" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pMINIMOS" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pEXISTENCIAS" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pACCION" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListInventarioResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListInventarioResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MaintenanceClientes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pCEDULA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pNOMBRE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pAPELLIDO_1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pAPELLIDO_2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pACCION" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MaintenanceClientesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MaintenanceClientesResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListClientes">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pCEDULA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pNOMBRE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pAPELLIDO_1" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pAPELLIDO_2" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pACCION" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListClientesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListClientesResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MaintenanceBodega">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pEMPRESA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSUCURSAL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pBODEGA" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pINVENTARIO" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pNOMBRE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUBICACION" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pACCION" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MaintenanceBodegaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MaintenanceBodegaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListBodega">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pEMPRESA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSUCURSAL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pBODEGA" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pINVENTARIO" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pNOMBRE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUBICACION" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pACCION" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListBodegaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListBodegaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MaintenanceFactura">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pEMPRESA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSUCURSAL" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pFACTURA" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pCLIENTE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pEMPLEADO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pFECHA" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="pESTADO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pACCION" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MaintenanceFacturaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MaintenanceFacturaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListFactura">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pEMPRESA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSUCURSAL" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pFACTURA" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pCLIENTE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pEMPLEADO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pFECHA" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="pESTADO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pACCION" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListFacturaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListFacturaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MaintenanceProveedores">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pID_EMPRESA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pID_SUCURSAL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pCEDULA_JURIDICA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pRAZON_SOCIAL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUBICACION" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pEMAIL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pTELEFONO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pACCION" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MaintenanceProveedoresResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MaintenanceProveedoresResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListProveedores">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pID_EMPRESA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pID_SUCURSAL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pCEDULA_JURIDICA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pRAZON_SOCIAL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUBICACION" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pEMAIL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pTELEFONO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pACCION" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListProveedoresResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListProveedoresResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MaintenanceDetalle_Factura">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pID_EMPRESA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pID_SUCURSAL" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pNUM_LINEA" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pFACTURA" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pARTICULO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pCANTIDAD" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pIMPUESTO" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pDESCUENTO" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pTOTAL" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pACCION" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MaintenanceDetalle_FacturaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MaintenanceDetalle_FacturaResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListDetalle_Factura">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pID_EMPRESA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pID_SUCURSAL" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pNUM_LINEA" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pFACTURA" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pARTICULO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pCANTIDAD" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pIMPUESTO" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pDESCUENTO" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pTOTAL" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pACCION" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListDetalle_FacturaResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListDetalle_FacturaResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MaintenanceEmpleados">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pEMPRESA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSUCURSAL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pCEDULA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pNOMBRE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pAPELLIDOS" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pEMAIL" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pTELEFONO" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pACCION" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MaintenanceEmpleadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MaintenanceEmpleadosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListEmpleados">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pEMPRESA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSUCURSAL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pCEDULA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pNOMBRE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pAPELLIDOS" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pEMAIL" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pTELEFONO" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pACCION" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListEmpleadosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListEmpleadosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MaintenanceUsuarios">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pEMPRESA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSUCURSAL" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUSUARIO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pCONTRA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pTIPO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pACCION" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MaintenanceUsuariosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MaintenanceUsuariosResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListUsuarios">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pEMPRESA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSUCURSAL" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pID" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUSUARIO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pCONTRA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pTIPO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pACCION" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListUsuariosResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListUsuariosResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MaintenanceCarde_Movimiento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pEMPRESA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSUCURSAL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUSUARIO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pMOVIMIENTO" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pINVENTARIO" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pTIPO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pCANTIDAD_EXISTENTE" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pCANTIDAD" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pFECHA_HORA" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="pACCION" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MaintenanceCarde_MovimientoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MaintenanceCarde_MovimientoResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListCarde_Movimiento">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pEMPRESA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSUCURSAL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUSUARIO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pMOVIMIENTO" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pINVENTARIO" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pTIPO" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="pCANTIDAD_EXISTENTE" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pCANTIDAD" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="pFECHA_HORA" type="s:dateTime" />
+            <s:element minOccurs="0" maxOccurs="1" name="pACCION" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListCarde_MovimientoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListCarde_MovimientoResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MaintenanceEstante">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pEMPRESA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSUCURSAL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pBODEGA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSECCION" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pESTANTE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pDESCRIPCION" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pACCION" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MaintenanceEstanteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MaintenanceEstanteResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListEstante">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pEMPRESA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSUCURSAL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pBODEGA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSECCION" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pESTANTE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pDESCRIPCION" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pACCION" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListEstanteResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListEstanteResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MaintenanceSeccion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pEMPRESA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSUCURSAL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pBODEGA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSECCION" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pDESCRIPCION" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pACCION" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MaintenanceSeccionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MaintenanceSeccionResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListSeccion">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pEMPRESA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSUCURSAL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pBODEGA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSECCION" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pDESCRIPCION" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pACCION" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListSeccionResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListSeccionResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
     </s:schema>
   </wsdl:types>
-  <wsdl:message name="MaintenanceEmpresaSoapIn">
-    <wsdl:part name="parameters" element="tns:MaintenanceEmpresa" />
+  <wsdl:message name="MaintenanceEmpresa1SoapIn">
+    <wsdl:part name="parameters" element="tns:MaintenanceEmpresa1" />
   </wsdl:message>
-  <wsdl:message name="MaintenanceEmpresaSoapOut">
-    <wsdl:part name="parameters" element="tns:MaintenanceEmpresaResponse" />
+  <wsdl:message name="MaintenanceEmpresa1SoapOut">
+    <wsdl:part name="parameters" element="tns:MaintenanceEmpresa1Response" />
   </wsdl:message>
   <wsdl:message name="GetListEmpresaSoapIn">
     <wsdl:part name="parameters" element="tns:GetListEmpresa" />
@@ -61,20 +676,280 @@
   <wsdl:message name="GetListEmpresaSoapOut">
     <wsdl:part name="parameters" element="tns:GetListEmpresaResponse" />
   </wsdl:message>
+  <wsdl:message name="MaintenanceArticuloSoapIn">
+    <wsdl:part name="parameters" element="tns:MaintenanceArticulo" />
+  </wsdl:message>
+  <wsdl:message name="MaintenanceArticuloSoapOut">
+    <wsdl:part name="parameters" element="tns:MaintenanceArticuloResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListArticuloSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListArticulo" />
+  </wsdl:message>
+  <wsdl:message name="GetListArticuloSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListArticuloResponse" />
+  </wsdl:message>
+  <wsdl:message name="MaintenanceCategoria_ArticuloSoapIn">
+    <wsdl:part name="parameters" element="tns:MaintenanceCategoria_Articulo" />
+  </wsdl:message>
+  <wsdl:message name="MaintenanceCategoria_ArticuloSoapOut">
+    <wsdl:part name="parameters" element="tns:MaintenanceCategoria_ArticuloResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListCategoria_articuloSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListCategoria_articulo" />
+  </wsdl:message>
+  <wsdl:message name="GetListCategoria_articuloSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListCategoria_articuloResponse" />
+  </wsdl:message>
+  <wsdl:message name="MaintenanceInventarioSoapIn">
+    <wsdl:part name="parameters" element="tns:MaintenanceInventario" />
+  </wsdl:message>
+  <wsdl:message name="MaintenanceInventarioSoapOut">
+    <wsdl:part name="parameters" element="tns:MaintenanceInventarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListInventarioSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListInventario" />
+  </wsdl:message>
+  <wsdl:message name="GetListInventarioSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListInventarioResponse" />
+  </wsdl:message>
+  <wsdl:message name="MaintenanceClientesSoapIn">
+    <wsdl:part name="parameters" element="tns:MaintenanceClientes" />
+  </wsdl:message>
+  <wsdl:message name="MaintenanceClientesSoapOut">
+    <wsdl:part name="parameters" element="tns:MaintenanceClientesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListClientesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListClientes" />
+  </wsdl:message>
+  <wsdl:message name="GetListClientesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListClientesResponse" />
+  </wsdl:message>
+  <wsdl:message name="MaintenanceBodegaSoapIn">
+    <wsdl:part name="parameters" element="tns:MaintenanceBodega" />
+  </wsdl:message>
+  <wsdl:message name="MaintenanceBodegaSoapOut">
+    <wsdl:part name="parameters" element="tns:MaintenanceBodegaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListBodegaSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListBodega" />
+  </wsdl:message>
+  <wsdl:message name="GetListBodegaSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListBodegaResponse" />
+  </wsdl:message>
+  <wsdl:message name="MaintenanceFacturaSoapIn">
+    <wsdl:part name="parameters" element="tns:MaintenanceFactura" />
+  </wsdl:message>
+  <wsdl:message name="MaintenanceFacturaSoapOut">
+    <wsdl:part name="parameters" element="tns:MaintenanceFacturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListFacturaSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListFactura" />
+  </wsdl:message>
+  <wsdl:message name="GetListFacturaSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListFacturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="MaintenanceProveedoresSoapIn">
+    <wsdl:part name="parameters" element="tns:MaintenanceProveedores" />
+  </wsdl:message>
+  <wsdl:message name="MaintenanceProveedoresSoapOut">
+    <wsdl:part name="parameters" element="tns:MaintenanceProveedoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListProveedoresSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListProveedores" />
+  </wsdl:message>
+  <wsdl:message name="GetListProveedoresSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListProveedoresResponse" />
+  </wsdl:message>
+  <wsdl:message name="MaintenanceDetalle_FacturaSoapIn">
+    <wsdl:part name="parameters" element="tns:MaintenanceDetalle_Factura" />
+  </wsdl:message>
+  <wsdl:message name="MaintenanceDetalle_FacturaSoapOut">
+    <wsdl:part name="parameters" element="tns:MaintenanceDetalle_FacturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListDetalle_FacturaSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListDetalle_Factura" />
+  </wsdl:message>
+  <wsdl:message name="GetListDetalle_FacturaSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListDetalle_FacturaResponse" />
+  </wsdl:message>
+  <wsdl:message name="MaintenanceEmpleadosSoapIn">
+    <wsdl:part name="parameters" element="tns:MaintenanceEmpleados" />
+  </wsdl:message>
+  <wsdl:message name="MaintenanceEmpleadosSoapOut">
+    <wsdl:part name="parameters" element="tns:MaintenanceEmpleadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListEmpleadosSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListEmpleados" />
+  </wsdl:message>
+  <wsdl:message name="GetListEmpleadosSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListEmpleadosResponse" />
+  </wsdl:message>
+  <wsdl:message name="MaintenanceUsuariosSoapIn">
+    <wsdl:part name="parameters" element="tns:MaintenanceUsuarios" />
+  </wsdl:message>
+  <wsdl:message name="MaintenanceUsuariosSoapOut">
+    <wsdl:part name="parameters" element="tns:MaintenanceUsuariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListUsuariosSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListUsuarios" />
+  </wsdl:message>
+  <wsdl:message name="GetListUsuariosSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListUsuariosResponse" />
+  </wsdl:message>
+  <wsdl:message name="MaintenanceCarde_MovimientoSoapIn">
+    <wsdl:part name="parameters" element="tns:MaintenanceCarde_Movimiento" />
+  </wsdl:message>
+  <wsdl:message name="MaintenanceCarde_MovimientoSoapOut">
+    <wsdl:part name="parameters" element="tns:MaintenanceCarde_MovimientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListCarde_MovimientoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListCarde_Movimiento" />
+  </wsdl:message>
+  <wsdl:message name="GetListCarde_MovimientoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListCarde_MovimientoResponse" />
+  </wsdl:message>
+  <wsdl:message name="MaintenanceEstanteSoapIn">
+    <wsdl:part name="parameters" element="tns:MaintenanceEstante" />
+  </wsdl:message>
+  <wsdl:message name="MaintenanceEstanteSoapOut">
+    <wsdl:part name="parameters" element="tns:MaintenanceEstanteResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListEstanteSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListEstante" />
+  </wsdl:message>
+  <wsdl:message name="GetListEstanteSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListEstanteResponse" />
+  </wsdl:message>
+  <wsdl:message name="MaintenanceSeccionSoapIn">
+    <wsdl:part name="parameters" element="tns:MaintenanceSeccion" />
+  </wsdl:message>
+  <wsdl:message name="MaintenanceSeccionSoapOut">
+    <wsdl:part name="parameters" element="tns:MaintenanceSeccionResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListSeccionSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListSeccion" />
+  </wsdl:message>
+  <wsdl:message name="GetListSeccionSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListSeccionResponse" />
+  </wsdl:message>
   <wsdl:portType name="WebServiceSoap">
-    <wsdl:operation name="MaintenanceEmpresa">
-      <wsdl:input message="tns:MaintenanceEmpresaSoapIn" />
-      <wsdl:output message="tns:MaintenanceEmpresaSoapOut" />
+    <wsdl:operation name="MaintenanceEmpresa1">
+      <wsdl:input message="tns:MaintenanceEmpresa1SoapIn" />
+      <wsdl:output message="tns:MaintenanceEmpresa1SoapOut" />
     </wsdl:operation>
     <wsdl:operation name="GetListEmpresa">
       <wsdl:input message="tns:GetListEmpresaSoapIn" />
       <wsdl:output message="tns:GetListEmpresaSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="MaintenanceArticulo">
+      <wsdl:input message="tns:MaintenanceArticuloSoapIn" />
+      <wsdl:output message="tns:MaintenanceArticuloSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListArticulo">
+      <wsdl:input message="tns:GetListArticuloSoapIn" />
+      <wsdl:output message="tns:GetListArticuloSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MaintenanceCategoria_Articulo">
+      <wsdl:input message="tns:MaintenanceCategoria_ArticuloSoapIn" />
+      <wsdl:output message="tns:MaintenanceCategoria_ArticuloSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListCategoria_articulo">
+      <wsdl:input message="tns:GetListCategoria_articuloSoapIn" />
+      <wsdl:output message="tns:GetListCategoria_articuloSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MaintenanceInventario">
+      <wsdl:input message="tns:MaintenanceInventarioSoapIn" />
+      <wsdl:output message="tns:MaintenanceInventarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListInventario">
+      <wsdl:input message="tns:GetListInventarioSoapIn" />
+      <wsdl:output message="tns:GetListInventarioSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MaintenanceClientes">
+      <wsdl:input message="tns:MaintenanceClientesSoapIn" />
+      <wsdl:output message="tns:MaintenanceClientesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListClientes">
+      <wsdl:input message="tns:GetListClientesSoapIn" />
+      <wsdl:output message="tns:GetListClientesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MaintenanceBodega">
+      <wsdl:input message="tns:MaintenanceBodegaSoapIn" />
+      <wsdl:output message="tns:MaintenanceBodegaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListBodega">
+      <wsdl:input message="tns:GetListBodegaSoapIn" />
+      <wsdl:output message="tns:GetListBodegaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MaintenanceFactura">
+      <wsdl:input message="tns:MaintenanceFacturaSoapIn" />
+      <wsdl:output message="tns:MaintenanceFacturaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListFactura">
+      <wsdl:input message="tns:GetListFacturaSoapIn" />
+      <wsdl:output message="tns:GetListFacturaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MaintenanceProveedores">
+      <wsdl:input message="tns:MaintenanceProveedoresSoapIn" />
+      <wsdl:output message="tns:MaintenanceProveedoresSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListProveedores">
+      <wsdl:input message="tns:GetListProveedoresSoapIn" />
+      <wsdl:output message="tns:GetListProveedoresSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MaintenanceDetalle_Factura">
+      <wsdl:input message="tns:MaintenanceDetalle_FacturaSoapIn" />
+      <wsdl:output message="tns:MaintenanceDetalle_FacturaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListDetalle_Factura">
+      <wsdl:input message="tns:GetListDetalle_FacturaSoapIn" />
+      <wsdl:output message="tns:GetListDetalle_FacturaSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MaintenanceEmpleados">
+      <wsdl:input message="tns:MaintenanceEmpleadosSoapIn" />
+      <wsdl:output message="tns:MaintenanceEmpleadosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListEmpleados">
+      <wsdl:input message="tns:GetListEmpleadosSoapIn" />
+      <wsdl:output message="tns:GetListEmpleadosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MaintenanceUsuarios">
+      <wsdl:input message="tns:MaintenanceUsuariosSoapIn" />
+      <wsdl:output message="tns:MaintenanceUsuariosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListUsuarios">
+      <wsdl:input message="tns:GetListUsuariosSoapIn" />
+      <wsdl:output message="tns:GetListUsuariosSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MaintenanceCarde_Movimiento">
+      <wsdl:input message="tns:MaintenanceCarde_MovimientoSoapIn" />
+      <wsdl:output message="tns:MaintenanceCarde_MovimientoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListCarde_Movimiento">
+      <wsdl:input message="tns:GetListCarde_MovimientoSoapIn" />
+      <wsdl:output message="tns:GetListCarde_MovimientoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MaintenanceEstante">
+      <wsdl:input message="tns:MaintenanceEstanteSoapIn" />
+      <wsdl:output message="tns:MaintenanceEstanteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListEstante">
+      <wsdl:input message="tns:GetListEstanteSoapIn" />
+      <wsdl:output message="tns:GetListEstanteSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MaintenanceSeccion">
+      <wsdl:input message="tns:MaintenanceSeccionSoapIn" />
+      <wsdl:output message="tns:MaintenanceSeccionSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListSeccion">
+      <wsdl:input message="tns:GetListSeccionSoapIn" />
+      <wsdl:output message="tns:GetListSeccionSoapOut" />
+    </wsdl:operation>
   </wsdl:portType>
   <wsdl:binding name="WebServiceSoap" type="tns:WebServiceSoap">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="MaintenanceEmpresa">
-      <soap:operation soapAction="http://tempuri.org/MaintenanceEmpresa" style="document" />
+    <wsdl:operation name="MaintenanceEmpresa1">
+      <soap:operation soapAction="http://tempuri.org/MaintenanceEmpresa1" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -91,11 +966,245 @@
         <soap:body use="literal" />
       </wsdl:output>
     </wsdl:operation>
+    <wsdl:operation name="MaintenanceArticulo">
+      <soap:operation soapAction="http://tempuri.org/MaintenanceArticulo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListArticulo">
+      <soap:operation soapAction="http://tempuri.org/GetListArticulo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaintenanceCategoria_Articulo">
+      <soap:operation soapAction="http://tempuri.org/MaintenanceCategoria_Articulo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListCategoria_articulo">
+      <soap:operation soapAction="http://tempuri.org/GetListCategoria_articulo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaintenanceInventario">
+      <soap:operation soapAction="http://tempuri.org/MaintenanceInventario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListInventario">
+      <soap:operation soapAction="http://tempuri.org/GetListInventario" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaintenanceClientes">
+      <soap:operation soapAction="http://tempuri.org/MaintenanceClientes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListClientes">
+      <soap:operation soapAction="http://tempuri.org/GetListClientes" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaintenanceBodega">
+      <soap:operation soapAction="http://tempuri.org/MaintenanceBodega" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListBodega">
+      <soap:operation soapAction="http://tempuri.org/GetListBodega" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaintenanceFactura">
+      <soap:operation soapAction="http://tempuri.org/MaintenanceFactura" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListFactura">
+      <soap:operation soapAction="http://tempuri.org/GetListFactura" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaintenanceProveedores">
+      <soap:operation soapAction="http://tempuri.org/MaintenanceProveedores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListProveedores">
+      <soap:operation soapAction="http://tempuri.org/GetListProveedores" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaintenanceDetalle_Factura">
+      <soap:operation soapAction="http://tempuri.org/MaintenanceDetalle_Factura" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListDetalle_Factura">
+      <soap:operation soapAction="http://tempuri.org/GetListDetalle_Factura" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaintenanceEmpleados">
+      <soap:operation soapAction="http://tempuri.org/MaintenanceEmpleados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListEmpleados">
+      <soap:operation soapAction="http://tempuri.org/GetListEmpleados" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaintenanceUsuarios">
+      <soap:operation soapAction="http://tempuri.org/MaintenanceUsuarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListUsuarios">
+      <soap:operation soapAction="http://tempuri.org/GetListUsuarios" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaintenanceCarde_Movimiento">
+      <soap:operation soapAction="http://tempuri.org/MaintenanceCarde_Movimiento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListCarde_Movimiento">
+      <soap:operation soapAction="http://tempuri.org/GetListCarde_Movimiento" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaintenanceEstante">
+      <soap:operation soapAction="http://tempuri.org/MaintenanceEstante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListEstante">
+      <soap:operation soapAction="http://tempuri.org/GetListEstante" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaintenanceSeccion">
+      <soap:operation soapAction="http://tempuri.org/MaintenanceSeccion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListSeccion">
+      <soap:operation soapAction="http://tempuri.org/GetListSeccion" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
   </wsdl:binding>
   <wsdl:binding name="WebServiceSoap12" type="tns:WebServiceSoap">
     <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <wsdl:operation name="MaintenanceEmpresa">
-      <soap12:operation soapAction="http://tempuri.org/MaintenanceEmpresa" style="document" />
+    <wsdl:operation name="MaintenanceEmpresa1">
+      <soap12:operation soapAction="http://tempuri.org/MaintenanceEmpresa1" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
@@ -105,6 +1214,240 @@
     </wsdl:operation>
     <wsdl:operation name="GetListEmpresa">
       <soap12:operation soapAction="http://tempuri.org/GetListEmpresa" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaintenanceArticulo">
+      <soap12:operation soapAction="http://tempuri.org/MaintenanceArticulo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListArticulo">
+      <soap12:operation soapAction="http://tempuri.org/GetListArticulo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaintenanceCategoria_Articulo">
+      <soap12:operation soapAction="http://tempuri.org/MaintenanceCategoria_Articulo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListCategoria_articulo">
+      <soap12:operation soapAction="http://tempuri.org/GetListCategoria_articulo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaintenanceInventario">
+      <soap12:operation soapAction="http://tempuri.org/MaintenanceInventario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListInventario">
+      <soap12:operation soapAction="http://tempuri.org/GetListInventario" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaintenanceClientes">
+      <soap12:operation soapAction="http://tempuri.org/MaintenanceClientes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListClientes">
+      <soap12:operation soapAction="http://tempuri.org/GetListClientes" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaintenanceBodega">
+      <soap12:operation soapAction="http://tempuri.org/MaintenanceBodega" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListBodega">
+      <soap12:operation soapAction="http://tempuri.org/GetListBodega" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaintenanceFactura">
+      <soap12:operation soapAction="http://tempuri.org/MaintenanceFactura" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListFactura">
+      <soap12:operation soapAction="http://tempuri.org/GetListFactura" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaintenanceProveedores">
+      <soap12:operation soapAction="http://tempuri.org/MaintenanceProveedores" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListProveedores">
+      <soap12:operation soapAction="http://tempuri.org/GetListProveedores" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaintenanceDetalle_Factura">
+      <soap12:operation soapAction="http://tempuri.org/MaintenanceDetalle_Factura" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListDetalle_Factura">
+      <soap12:operation soapAction="http://tempuri.org/GetListDetalle_Factura" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaintenanceEmpleados">
+      <soap12:operation soapAction="http://tempuri.org/MaintenanceEmpleados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListEmpleados">
+      <soap12:operation soapAction="http://tempuri.org/GetListEmpleados" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaintenanceUsuarios">
+      <soap12:operation soapAction="http://tempuri.org/MaintenanceUsuarios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListUsuarios">
+      <soap12:operation soapAction="http://tempuri.org/GetListUsuarios" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaintenanceCarde_Movimiento">
+      <soap12:operation soapAction="http://tempuri.org/MaintenanceCarde_Movimiento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListCarde_Movimiento">
+      <soap12:operation soapAction="http://tempuri.org/GetListCarde_Movimiento" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaintenanceEstante">
+      <soap12:operation soapAction="http://tempuri.org/MaintenanceEstante" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListEstante">
+      <soap12:operation soapAction="http://tempuri.org/GetListEstante" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaintenanceSeccion">
+      <soap12:operation soapAction="http://tempuri.org/MaintenanceSeccion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListSeccion">
+      <soap12:operation soapAction="http://tempuri.org/GetListSeccion" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
