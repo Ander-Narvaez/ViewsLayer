@@ -7,7 +7,7 @@
 // </generado automáticamente>
 //------------------------------------------------------------------------------
 
-namespace ViewsLayer.Views
+namespace ViewsLayer
 {
 
 
@@ -96,13 +96,13 @@ namespace ViewsLayer.Views
         protected global::System.Web.UI.WebControls.Label lblempresa;
 
         /// <summary>
-        /// Control txtEMPRESA.
+        /// Control txtEmpresa.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList txtEMPRESA;
+        protected global::System.Web.UI.WebControls.DropDownList txtEmpresa;
 
         /// <summary>
         /// Control lblsucursal.
@@ -114,13 +114,13 @@ namespace ViewsLayer.Views
         protected global::System.Web.UI.WebControls.Label lblsucursal;
 
         /// <summary>
-        /// Control txtSUCURSAL.
+        /// Control txtSucursal.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtSUCURSAL;
+        protected global::System.Web.UI.WebControls.TextBox txtSucursal;
 
         /// <summary>
         /// Control lblnombre.
@@ -132,13 +132,13 @@ namespace ViewsLayer.Views
         protected global::System.Web.UI.WebControls.Label lblnombre;
 
         /// <summary>
-        /// Control txtNOMBRE.
+        /// Control txtNombre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtNOMBRE;
+        protected global::System.Web.UI.WebControls.TextBox txtNombre;
 
         /// <summary>
         /// Control lblubicacion.
@@ -150,13 +150,13 @@ namespace ViewsLayer.Views
         protected global::System.Web.UI.WebControls.Label lblubicacion;
 
         /// <summary>
-        /// Control txtUBICACION.
+        /// Control txtUbicacion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUBICACION;
+        protected global::System.Web.UI.WebControls.TextBox txtUbicacion;
 
         /// <summary>
         /// Control lblemail.
@@ -168,13 +168,13 @@ namespace ViewsLayer.Views
         protected global::System.Web.UI.WebControls.Label lblemail;
 
         /// <summary>
-        /// Control txtEMAIL.
+        /// Control txtEmail.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEMAIL;
+        protected global::System.Web.UI.WebControls.TextBox txtEmail;
 
         /// <summary>
         /// Control lbltelefono.
@@ -186,13 +186,13 @@ namespace ViewsLayer.Views
         protected global::System.Web.UI.WebControls.Label lbltelefono;
 
         /// <summary>
-        /// Control txtTELEFONO.
+        /// Control txtTelefono.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTELEFONO;
+        protected global::System.Web.UI.WebControls.TextBox txtTelefono;
 
         /// <summary>
         /// Control alertModal.

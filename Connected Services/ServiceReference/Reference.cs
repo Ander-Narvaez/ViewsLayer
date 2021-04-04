@@ -30,6 +30,20 @@ namespace ViewsLayer.ServiceReference {
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListEmpresa", ReplyAction="*")]
         System.Threading.Tasks.Task<System.Data.DataSet> GetListEmpresaAsync(string pEMPRESA, string pNOMBRE, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION);
         
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaintenanceSucursal", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        string MaintenanceSucursal(string pEMPRESA, string pSUCURSAL, string pNOMBRE, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaintenanceSucursal", ReplyAction="*")]
+        System.Threading.Tasks.Task<string> MaintenanceSucursalAsync(string pEMPRESA, string pSUCURSAL, string pNOMBRE, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListSucursal", ReplyAction="*")]
+        [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
+        System.Data.DataSet GetListSucursal(string pEMPRESA, string pSUCURSAL, string pNOMBRE, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION);
+        
+        [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListSucursal", ReplyAction="*")]
+        System.Threading.Tasks.Task<System.Data.DataSet> GetListSucursalAsync(string pEMPRESA, string pSUCURSAL, string pNOMBRE, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION);
+        
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaintenanceArticulo", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
         string MaintenanceArticulo(string pARTICULO, string pCATEGORIA, decimal pPRECIO, string pACCION);
@@ -254,6 +268,22 @@ namespace ViewsLayer.ServiceReference {
         
         public System.Threading.Tasks.Task<System.Data.DataSet> GetListEmpresaAsync(string pEMPRESA, string pNOMBRE, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION) {
             return base.Channel.GetListEmpresaAsync(pEMPRESA, pNOMBRE, pUBICACION, pEMAIL, pTELEFONO, pACCION);
+        }
+        
+        public string MaintenanceSucursal(string pEMPRESA, string pSUCURSAL, string pNOMBRE, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION) {
+            return base.Channel.MaintenanceSucursal(pEMPRESA, pSUCURSAL, pNOMBRE, pUBICACION, pEMAIL, pTELEFONO, pACCION);
+        }
+        
+        public System.Threading.Tasks.Task<string> MaintenanceSucursalAsync(string pEMPRESA, string pSUCURSAL, string pNOMBRE, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION) {
+            return base.Channel.MaintenanceSucursalAsync(pEMPRESA, pSUCURSAL, pNOMBRE, pUBICACION, pEMAIL, pTELEFONO, pACCION);
+        }
+        
+        public System.Data.DataSet GetListSucursal(string pEMPRESA, string pSUCURSAL, string pNOMBRE, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION) {
+            return base.Channel.GetListSucursal(pEMPRESA, pSUCURSAL, pNOMBRE, pUBICACION, pEMAIL, pTELEFONO, pACCION);
+        }
+        
+        public System.Threading.Tasks.Task<System.Data.DataSet> GetListSucursalAsync(string pEMPRESA, string pSUCURSAL, string pNOMBRE, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION) {
+            return base.Channel.GetListSucursalAsync(pEMPRESA, pSUCURSAL, pNOMBRE, pUBICACION, pEMAIL, pTELEFONO, pACCION);
         }
         
         public string MaintenanceArticulo(string pARTICULO, string pCATEGORIA, decimal pPRECIO, string pACCION) {
