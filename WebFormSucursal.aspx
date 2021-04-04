@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Mobile.Master" AutoEventWireup="true" CodeBehind="WebFormSucursal.aspx.cs" Inherits="ViewsLayer.Views.WebFormSucursal" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="WebFormSucursal.aspx.cs" Inherits="ViewsLayer.WebFormSucursal" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
 
@@ -74,42 +74,42 @@
                                 <div class="col-12 d-flex flex-column mt-3">
                                     <div class="d-flex">
                                         <asp:Label ID="lblempresa" runat="server" Text="Empresa" CssClass="" ToolTip="" Width="100px"></asp:Label>
-                                        <asp:DropDownList ID="txtEMPRESA" runat="server" ReadOnly="true" CssClass="form-control ml-4"></asp:DropDownList>
+                                        <asp:DropDownList ID="txtEmpresa" runat="server" ReadOnly="true" CssClass="form-control ml-4"></asp:DropDownList>
                                     </div>
                                 </div>
                                 <%--  ID SUCURSAL--%>
                                 <div class="col-12 d-flex flex-column mt-3">
                                     <div class="d-flex">
                                         <asp:Label ID="lblsucursal" runat="server" Text="Sucursal" CssClass="" ToolTip="" Width="100px"></asp:Label>
-                                        <asp:TextBox ID="txtSUCURSAL" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
+                                        <asp:TextBox ID="txtSucursal" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
                                     </div>
                                 </div>
                                 <%--  NOMBRE--%>
                                 <div class="col-12 d-flex flex-column mt-3">
                                     <div class="d-flex">
                                         <asp:Label ID="lblnombre" runat="server" Text="Nombre" CssClass="" ToolTip="" Width="100px"></asp:Label>
-                                        <asp:TextBox ID="txtNOMBRE" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
+                                        <asp:TextBox ID="txtNombre" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
                                     </div>
                                 </div>
                                 <%-- UBICACION --%>
                                 <div class="col-12 d-flex flex-column mt-3">
                                     <div class="d-flex">
                                         <asp:Label ID="lblubicacion" runat="server" Text="Ubicacion" CssClass="" ToolTip="" Width="100px"></asp:Label>
-                                        <asp:TextBox ID="txtUBICACION" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
+                                        <asp:TextBox ID="txtUbicacion" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
                                     </div>
                                 </div>
                                 <%-- EMAIL --%>
                                 <div class="col-12 d-flex flex-column mt-3">
                                     <div class="d-flex">
                                         <asp:Label ID="lblemail" runat="server" Text="Email" CssClass="" ToolTip="" Width="100px"></asp:Label>
-                                        <asp:TextBox ID="txtEMAIL" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
+                                        <asp:TextBox ID="txtEmail" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
                                     </div>
                                 </div>
                                 <%-- TELEFONO --%>
                                 <div class="col-12 d-flex flex-column mt-3">
                                     <div class="d-flex">
                                         <asp:Label ID="lbltelefono" runat="server" Text="Telefono" CssClass="" ToolTip="" Width="100px"></asp:Label>
-                                        <asp:TextBox ID="txtTELEFONO" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
+                                        <asp:TextBox ID="txtTelefono" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
                                     </div>
                                 </div>
 
@@ -140,4 +140,5 @@
             </div>
         </div>
     </div>
+
 </asp:Content>

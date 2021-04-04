@@ -107,6 +107,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="WebFormSucursal.aspx" />
     <Content Include="WebFormUsuarios.aspx" />
     <None Include="Connected Services\ServiceReference\WebService.disco" />
     <None Include="Connected Services\ServiceReference\configuration91.svcinfo" />
@@ -263,7 +264,6 @@
     <Content Include="WebFormEstante.aspx" />
     <Content Include="WebFormInventario.aspx" />
     <Content Include="WebFormProveedores.aspx" />
-    <Content Include="WebFormSucursal.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
     <Content Include="Site.Mobile.Master" />

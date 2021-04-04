@@ -47,6 +47,53 @@
           </s:sequence>
         </s:complexType>
       </s:element>
+      <s:element name="MaintenanceSucursal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pEMPRESA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSUCURSAL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pNOMBRE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUBICACION" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pEMAIL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pTELEFONO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pACCION" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MaintenanceSucursalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MaintenanceSucursalResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListSucursal">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="pEMPRESA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSUCURSAL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pNOMBRE" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pUBICACION" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pEMAIL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pTELEFONO" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pACCION" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetListSucursalResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetListSucursalResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
       <s:element name="MaintenanceArticulo">
         <s:complexType>
           <s:sequence>
@@ -676,6 +723,18 @@
   <wsdl:message name="GetListEmpresaSoapOut">
     <wsdl:part name="parameters" element="tns:GetListEmpresaResponse" />
   </wsdl:message>
+  <wsdl:message name="MaintenanceSucursalSoapIn">
+    <wsdl:part name="parameters" element="tns:MaintenanceSucursal" />
+  </wsdl:message>
+  <wsdl:message name="MaintenanceSucursalSoapOut">
+    <wsdl:part name="parameters" element="tns:MaintenanceSucursalResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetListSucursalSoapIn">
+    <wsdl:part name="parameters" element="tns:GetListSucursal" />
+  </wsdl:message>
+  <wsdl:message name="GetListSucursalSoapOut">
+    <wsdl:part name="parameters" element="tns:GetListSucursalResponse" />
+  </wsdl:message>
   <wsdl:message name="MaintenanceArticuloSoapIn">
     <wsdl:part name="parameters" element="tns:MaintenanceArticulo" />
   </wsdl:message>
@@ -841,6 +900,14 @@
       <wsdl:input message="tns:GetListEmpresaSoapIn" />
       <wsdl:output message="tns:GetListEmpresaSoapOut" />
     </wsdl:operation>
+    <wsdl:operation name="MaintenanceSucursal">
+      <wsdl:input message="tns:MaintenanceSucursalSoapIn" />
+      <wsdl:output message="tns:MaintenanceSucursalSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetListSucursal">
+      <wsdl:input message="tns:GetListSucursalSoapIn" />
+      <wsdl:output message="tns:GetListSucursalSoapOut" />
+    </wsdl:operation>
     <wsdl:operation name="MaintenanceArticulo">
       <wsdl:input message="tns:MaintenanceArticuloSoapIn" />
       <wsdl:output message="tns:MaintenanceArticuloSoapOut" />
@@ -959,6 +1026,24 @@
     </wsdl:operation>
     <wsdl:operation name="GetListEmpresa">
       <soap:operation soapAction="http://tempuri.org/GetListEmpresa" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaintenanceSucursal">
+      <soap:operation soapAction="http://tempuri.org/MaintenanceSucursal" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListSucursal">
+      <soap:operation soapAction="http://tempuri.org/GetListSucursal" style="document" />
       <wsdl:input>
         <soap:body use="literal" />
       </wsdl:input>
@@ -1214,6 +1299,24 @@
     </wsdl:operation>
     <wsdl:operation name="GetListEmpresa">
       <soap12:operation soapAction="http://tempuri.org/GetListEmpresa" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MaintenanceSucursal">
+      <soap12:operation soapAction="http://tempuri.org/MaintenanceSucursal" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetListSucursal">
+      <soap12:operation soapAction="http://tempuri.org/GetListSucursal" style="document" />
       <wsdl:input>
         <soap12:body use="literal" />
       </wsdl:input>
