@@ -11,15 +11,16 @@ namespace ViewsLayer
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            String vResfrescarObjeto;
-            if (IsPostBack)
+            if (!IsPostBack)
             {
-                vResfrescarObjeto = "nueva";
+                Session["op"] = "";
+
+                CargarTabla();
             }
             else
             {
-                CargarTabla();
             }
+            CargarTabla();
         }
 
         public void informar(String m)
@@ -44,6 +45,7 @@ namespace ViewsLayer
             catch (Exception es)
             {
                 m = es.Message;
+                informar(m);
             }
         }
 
@@ -51,8 +53,8 @@ namespace ViewsLayer
         {
             if (op == 1)
             {
-                string encenderModal = "$('#staticBackdrop').modal('show')";
-                ScriptManager.RegisterStartupScript(this, this.GetType(), "script", encenderModal, true);
+                string OnModal = "$('#staticBackdrop').modal('show')";
+                ScriptManager.RegisterStartupScript(this, this.GetType(), "script", OnModal, true);
             }
             else if (op == 1)
             {
@@ -61,11 +63,12 @@ namespace ViewsLayer
 
         protected void btnCrear_Click(object sender, EventArgs e)
         {
-            txtEMPRESA.Text = "";
-            txtNOMBRE.Text = "";
-            txtUBICACION.Text = "";
-            txtEMAIL.Text = "";
-            txtTELEFONO.Text = "";
+            Session["op"] = "I";
+            txtEmpresa.Text = "";
+            txtNombre.Text = "";
+            txtUbicacion.Text = "";
+            txtEmail.Text = "";
+            txtTelefono.Text = "";
 
             alertModal.Visible = false;
             btnEliminar.Visible = false;
@@ -80,11 +83,12 @@ namespace ViewsLayer
             {
                 GridViewRow row = tbl.Rows[tbl.SelectedIndex];
 
-                txtEMPRESA.Text = row.Cells[1].Text;
-                txtNOMBRE.Text = row.Cells[2].Text;
-                txtUBICACION.Text = row.Cells[3].Text;
-                txtEMAIL.Text = row.Cells[4].Text;
-                txtTELEFONO.Text = row.Cells[5].Text;
+                Session["op"] = "U";
+                txtEmpresa.Text = row.Cells[1].Text;
+                txtNombre.Text = row.Cells[2].Text;
+                txtUbicacion.Text = row.Cells[3].Text;
+                txtEmail.Text = row.Cells[4].Text;
+                txtTelefono.Text = row.Cells[5].Text;
 
                 btnEliminar.Visible = true;
                 tbl.SelectedIndex = -1;
@@ -92,47 +96,57 @@ namespace ViewsLayer
 
                 OnModal(1);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                informar(ex.Message);
                 throw;
             }
         }
 
         protected void btnGuardar_Click(object sender, EventArgs e)
         {
+            String m= "";
             try
             {
-                OracleExecute("I");
+                OracleExecute();
                 tbl.SelectedIndex = -1;
                 btnEliminar.Visible = true;
                 CargarTabla();
             }
-            catch (Exception)
+            catch (Exception es)
             {
+                m = es.Message;
+                informar(m);
                 OnModal(1);
             }
         }
 
         protected void btnEliminar_Click(object sender, EventArgs e)
         {
+            String m = "";
+
             try
             {
                 OracleExecute("D");
-
                 CargarTabla();
             }
-            catch (Exception ex)
+            catch (Exception es)
             {
-                informar(ex.Message);
+                m = es.Message;
+                informar(m);
             }
+        }
+
+        private String OracleExecute()
+        {
+            String op = (string)Session["op"];
+
+            return OracleExecute(op);
         }
 
         private String OracleExecute(string op)
         {
-            String result = "";
-            result = Ws.MaintenanceEmpresa(this.txtEMPRESA.Text, this.txtNOMBRE.Text, this.txtUBICACION.Text, this.txtEMAIL.Text,
-                                           this.txtTELEFONO.Text, op);
-            Ws.Close();
+            String result = Ws.MaintenanceEmpresa1(txtEmpresa.Text, txtNombre.Text,txtUbicacion.Text, txtEmail.Text, txtTelefono.Text, op);
             return result;
         }
 
