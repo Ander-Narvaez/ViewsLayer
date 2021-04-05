@@ -477,7 +477,7 @@
             <s:element minOccurs="0" maxOccurs="1" name="pNOMBRE" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="pAPELLIDOS" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="pEMAIL" type="s:string" />
-            <s:element minOccurs="1" maxOccurs="1" name="pTELEFONO" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pTELEFONO" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="pACCION" type="s:string" />
           </s:sequence>
         </s:complexType>
@@ -498,7 +498,7 @@
             <s:element minOccurs="0" maxOccurs="1" name="pNOMBRE" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="pAPELLIDOS" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="pEMAIL" type="s:string" />
-            <s:element minOccurs="1" maxOccurs="1" name="pTELEFONO" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="pTELEFONO" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="pACCION" type="s:string" />
           </s:sequence>
         </s:complexType>
