@@ -130,17 +130,17 @@ namespace ViewsLayer.ServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaintenanceProveedores", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        string MaintenanceProveedores(string pID_EMPRESA, string pID_SUCURSAL, string pCEDULA_JURIDICA, string pRAZON_SOCIAL, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION);
+        string MaintenanceProveedores(string pEMPRESA, string pSUCURSAL, string pCEDULA_JURIDICA, string pRAZON_SOCIAL, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaintenanceProveedores", ReplyAction="*")]
-        System.Threading.Tasks.Task<string> MaintenanceProveedoresAsync(string pID_EMPRESA, string pID_SUCURSAL, string pCEDULA_JURIDICA, string pRAZON_SOCIAL, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION);
+        System.Threading.Tasks.Task<string> MaintenanceProveedoresAsync(string pEMPRESA, string pSUCURSAL, string pCEDULA_JURIDICA, string pRAZON_SOCIAL, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListProveedores", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet GetListProveedores(string pID_EMPRESA, string pID_SUCURSAL, string pCEDULA_JURIDICA, string pRAZON_SOCIAL, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION);
+        System.Data.DataSet GetListProveedores(string pEMPRESA, string pSUCURSAL, string pCEDULA_JURIDICA, string pRAZON_SOCIAL, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListProveedores", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> GetListProveedoresAsync(string pID_EMPRESA, string pID_SUCURSAL, string pCEDULA_JURIDICA, string pRAZON_SOCIAL, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION);
+        System.Threading.Tasks.Task<System.Data.DataSet> GetListProveedoresAsync(string pEMPRESA, string pSUCURSAL, string pCEDULA_JURIDICA, string pRAZON_SOCIAL, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaintenanceDetalle_Factura", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -382,20 +382,20 @@ namespace ViewsLayer.ServiceReference {
             return base.Channel.GetListFacturaAsync(pEMPRESA, pSUCURSAL, pFACTURA, pCLIENTE, pEMPLEADO, pFECHA, pESTADO, pACCION);
         }
         
-        public string MaintenanceProveedores(string pID_EMPRESA, string pID_SUCURSAL, string pCEDULA_JURIDICA, string pRAZON_SOCIAL, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION) {
-            return base.Channel.MaintenanceProveedores(pID_EMPRESA, pID_SUCURSAL, pCEDULA_JURIDICA, pRAZON_SOCIAL, pUBICACION, pEMAIL, pTELEFONO, pACCION);
+        public string MaintenanceProveedores(string pEMPRESA, string pSUCURSAL, string pCEDULA_JURIDICA, string pRAZON_SOCIAL, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION) {
+            return base.Channel.MaintenanceProveedores(pEMPRESA, pSUCURSAL, pCEDULA_JURIDICA, pRAZON_SOCIAL, pUBICACION, pEMAIL, pTELEFONO, pACCION);
         }
         
-        public System.Threading.Tasks.Task<string> MaintenanceProveedoresAsync(string pID_EMPRESA, string pID_SUCURSAL, string pCEDULA_JURIDICA, string pRAZON_SOCIAL, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION) {
-            return base.Channel.MaintenanceProveedoresAsync(pID_EMPRESA, pID_SUCURSAL, pCEDULA_JURIDICA, pRAZON_SOCIAL, pUBICACION, pEMAIL, pTELEFONO, pACCION);
+        public System.Threading.Tasks.Task<string> MaintenanceProveedoresAsync(string pEMPRESA, string pSUCURSAL, string pCEDULA_JURIDICA, string pRAZON_SOCIAL, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION) {
+            return base.Channel.MaintenanceProveedoresAsync(pEMPRESA, pSUCURSAL, pCEDULA_JURIDICA, pRAZON_SOCIAL, pUBICACION, pEMAIL, pTELEFONO, pACCION);
         }
         
-        public System.Data.DataSet GetListProveedores(string pID_EMPRESA, string pID_SUCURSAL, string pCEDULA_JURIDICA, string pRAZON_SOCIAL, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION) {
-            return base.Channel.GetListProveedores(pID_EMPRESA, pID_SUCURSAL, pCEDULA_JURIDICA, pRAZON_SOCIAL, pUBICACION, pEMAIL, pTELEFONO, pACCION);
+        public System.Data.DataSet GetListProveedores(string pEMPRESA, string pSUCURSAL, string pCEDULA_JURIDICA, string pRAZON_SOCIAL, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION) {
+            return base.Channel.GetListProveedores(pEMPRESA, pSUCURSAL, pCEDULA_JURIDICA, pRAZON_SOCIAL, pUBICACION, pEMAIL, pTELEFONO, pACCION);
         }
         
-        public System.Threading.Tasks.Task<System.Data.DataSet> GetListProveedoresAsync(string pID_EMPRESA, string pID_SUCURSAL, string pCEDULA_JURIDICA, string pRAZON_SOCIAL, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION) {
-            return base.Channel.GetListProveedoresAsync(pID_EMPRESA, pID_SUCURSAL, pCEDULA_JURIDICA, pRAZON_SOCIAL, pUBICACION, pEMAIL, pTELEFONO, pACCION);
+        public System.Threading.Tasks.Task<System.Data.DataSet> GetListProveedoresAsync(string pEMPRESA, string pSUCURSAL, string pCEDULA_JURIDICA, string pRAZON_SOCIAL, string pUBICACION, string pEMAIL, string pTELEFONO, string pACCION) {
+            return base.Channel.GetListProveedoresAsync(pEMPRESA, pSUCURSAL, pCEDULA_JURIDICA, pRAZON_SOCIAL, pUBICACION, pEMAIL, pTELEFONO, pACCION);
         }
         
         public string MaintenanceDetalle_Factura(string pID_EMPRESA, string pID_SUCURSAL, int pNUM_LINEA, int pFACTURA, string pARTICULO, int pCANTIDAD, int pIMPUESTO, int pDESCUENTO, int pTOTAL, string pACCION) {

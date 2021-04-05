@@ -96,13 +96,13 @@ namespace ViewsLayer
         protected global::System.Web.UI.WebControls.Label lblempresa;
 
         /// <summary>
-        /// Control txtEMPRESA.
+        /// Control txtEmpresa.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList txtEMPRESA;
+        protected global::System.Web.UI.WebControls.DropDownList txtEmpresa;
 
         /// <summary>
         /// Control lblsucursal.
@@ -114,13 +114,13 @@ namespace ViewsLayer
         protected global::System.Web.UI.WebControls.Label lblsucursal;
 
         /// <summary>
-        /// Control txtSUCURSAL.
+        /// Control txtSucursal.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList txtSUCURSAL;
+        protected global::System.Web.UI.WebControls.DropDownList txtSucursal;
 
         /// <summary>
         /// Control lblcedula_juridica.
@@ -132,13 +132,13 @@ namespace ViewsLayer
         protected global::System.Web.UI.WebControls.Label lblcedula_juridica;
 
         /// <summary>
-        /// Control txtCEDULA_JURIDICA.
+        /// Control txtCedula_juridica.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCEDULA_JURIDICA;
+        protected global::System.Web.UI.WebControls.TextBox txtCedula_juridica;
 
         /// <summary>
         /// Control lblrazon_social.
@@ -150,13 +150,13 @@ namespace ViewsLayer
         protected global::System.Web.UI.WebControls.Label lblrazon_social;
 
         /// <summary>
-        /// Control txtRAZON_SOCIAL.
+        /// Control txtRazon_social.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtRAZON_SOCIAL;
+        protected global::System.Web.UI.WebControls.TextBox txtRazon_social;
 
         /// <summary>
         /// Control lblubicacion.
@@ -168,13 +168,13 @@ namespace ViewsLayer
         protected global::System.Web.UI.WebControls.Label lblubicacion;
 
         /// <summary>
-        /// Control txtUBICACION.
+        /// Control txtUbicacion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtUBICACION;
+        protected global::System.Web.UI.WebControls.TextBox txtUbicacion;
 
         /// <summary>
         /// Control lblemail.
@@ -186,13 +186,13 @@ namespace ViewsLayer
         protected global::System.Web.UI.WebControls.Label lblemail;
 
         /// <summary>
-        /// Control txtEMAIL.
+        /// Control txtEmail.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEMAIL;
+        protected global::System.Web.UI.WebControls.TextBox txtEmail;
 
         /// <summary>
         /// Control lbltelefono.
@@ -204,13 +204,13 @@ namespace ViewsLayer
         protected global::System.Web.UI.WebControls.Label lbltelefono;
 
         /// <summary>
-        /// Control txtTELEFONO.
+        /// Control txtTelefono.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTELEFONO;
+        protected global::System.Web.UI.WebControls.TextBox txtTelefono;
 
         /// <summary>
         /// Control alertModal.

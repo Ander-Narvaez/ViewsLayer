@@ -369,8 +369,8 @@
       <s:element name="MaintenanceProveedores">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="pID_EMPRESA" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pID_SUCURSAL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pEMPRESA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSUCURSAL" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="pCEDULA_JURIDICA" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="pRAZON_SOCIAL" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="pUBICACION" type="s:string" />
@@ -390,8 +390,8 @@
       <s:element name="GetListProveedores">
         <s:complexType>
           <s:sequence>
-            <s:element minOccurs="0" maxOccurs="1" name="pID_EMPRESA" type="s:string" />
-            <s:element minOccurs="0" maxOccurs="1" name="pID_SUCURSAL" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pEMPRESA" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="pSUCURSAL" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="pCEDULA_JURIDICA" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="pRAZON_SOCIAL" type="s:string" />
             <s:element minOccurs="0" maxOccurs="1" name="pUBICACION" type="s:string" />

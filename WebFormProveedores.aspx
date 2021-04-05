@@ -74,49 +74,49 @@
                                 <div class="col-12 d-flex flex-column mt-3">
                                     <div class="d-flex">
                                         <asp:Label ID="lblempresa" runat="server" Text="Empresa" CssClass="" ToolTip="" Width="100px"></asp:Label>
-                                        <asp:DropDownList ID="txtEMPRESA" runat="server" ReadOnly="true" CssClass="form-control ml-4"></asp:DropDownList>
+                                        <asp:DropDownList ID="txtEmpresa" runat="server" ReadOnly="true" CssClass="form-control ml-4"></asp:DropDownList>
                                     </div>
                                 </div>
                                 <%--  ID SUCURSAL--%>
                                 <div class="col-12 d-flex flex-column mt-3">
                                     <div class="d-flex">
                                         <asp:Label ID="lblsucursal" runat="server" Text="Sucursal" CssClass="" ToolTip="" Width="100px"></asp:Label>
-                                        <asp:DropDownList ID="txtSUCURSAL" runat="server" ReadOnly="true" CssClass="form-control ml-4"></asp:DropDownList>
+                                        <asp:DropDownList ID="txtSucursal" runat="server" ReadOnly="true" CssClass="form-control ml-4"></asp:DropDownList>
                                     </div>
                                 </div>
                                 <%--  CEDULA JURIDICA --%>
                                 <div class="col-12 d-flex flex-column mt-3">
                                     <div class="d-flex">
                                         <asp:Label ID="lblcedula_juridica" runat="server" Text="Cedula Juridica" CssClass="" ToolTip="" Width="100px"></asp:Label>
-                                        <asp:TextBox ID="txtCEDULA_JURIDICA" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
+                                        <asp:TextBox ID="txtCedula_juridica" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
                                     </div>
                                 </div>
                                 <%--  RAZON SOCIAL --%>
                                 <div class="col-12 d-flex flex-column mt-3">
                                     <div class="d-flex">
                                         <asp:Label ID="lblrazon_social" runat="server" Text="Razón Social" CssClass="" ToolTip="" Width="100px"></asp:Label>
-                                        <asp:TextBox ID="txtRAZON_SOCIAL" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
+                                        <asp:TextBox ID="txtRazon_social" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
                                     </div>
                                 </div>
                                 <%-- UBICACION --%>
                                 <div class="col-12 d-flex flex-column mt-3">
                                     <div class="d-flex">
                                         <asp:Label ID="lblubicacion" runat="server" Text="Ubicación" CssClass="" ToolTip="" Width="100px"></asp:Label>
-                                        <asp:TextBox ID="txtUBICACION" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
+                                        <asp:TextBox ID="txtUbicacion" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
                                     </div>
                                 </div>
                                 <%-- EMAIL --%>
                                 <div class="col-12 d-flex flex-column mt-3">
                                     <div class="d-flex">
                                         <asp:Label ID="lblemail" runat="server" Text="Email" CssClass="" ToolTip="" Width="100px"></asp:Label>
-                                        <asp:TextBox ID="txtEMAIL" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
+                                        <asp:TextBox ID="txtEmail" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
                                     </div>
                                 </div>
                                 <%-- TELEFONO --%>
                                 <div class="col-12 d-flex flex-column mt-3">
                                     <div class="d-flex">
                                         <asp:Label ID="lbltelefono" runat="server" Text="Telefono" CssClass="" ToolTip="" Width="100px"></asp:Label>
-                                        <asp:TextBox ID="txtTELEFONO" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
+                                        <asp:TextBox ID="txtTelefono" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
                                     </div>
                                 </div>
 
