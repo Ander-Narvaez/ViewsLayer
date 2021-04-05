@@ -133,14 +133,15 @@ namespace ViewsLayer
                 GridViewRow row = tbl.Rows[tbl.SelectedIndex];
 
                 Session["op"] = "U";
-                ListItem item = txtEmpresa.Items.FindByValue(row.Cells[1].Text);
-                txtEmpresa.SelectedIndex = txtEmpresa.Items.IndexOf(item);
-                txtSucursal.SelectedIndex = txtSucursal.Items.IndexOf(item);
-                txtCedula.Text = row.Cells[4].Text;
-                txtNombre.Text = row.Cells[5].Text;
-                txtApellidos.Text = row.Cells[6].Text;
-                txtEmail.Text = row.Cells[7].Text;
-                txtTelefono.Text = row.Cells[8].Text;
+                ListItem item1 = txtEmpresa.Items.FindByValue(row.Cells[1].Text);
+                txtEmpresa.SelectedIndex = txtEmpresa.Items.IndexOf(item1);
+                ListItem item2 = txtSucursal.Items.FindByValue(row.Cells[2].Text);
+                txtSucursal.SelectedIndex = txtSucursal.Items.IndexOf(item2);
+                txtCedula.Text = row.Cells[3].Text;
+                txtNombre.Text = row.Cells[4].Text;
+                txtApellidos.Text = row.Cells[5].Text;
+                txtEmail.Text = row.Cells[6].Text;
+                txtTelefono.Text = row.Cells[7].Text;
 
                 btnEliminar.Visible = true;
                 tbl.SelectedIndex = -1;

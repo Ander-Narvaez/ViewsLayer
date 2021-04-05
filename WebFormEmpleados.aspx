@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="WebFormEmpleados.aspx.cs" Inherits="ViewsLayer.WebFormEmpleados" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="MainContent" runat="server">
-
+    <meta charset="utf-8" />
     <div class="row ">
         <div class="col-12 text-left">
             <div class="col-form-label  pl-3 text-capitalize">
