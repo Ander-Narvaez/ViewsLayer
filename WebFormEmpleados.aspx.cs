@@ -21,6 +21,7 @@ namespace ViewsLayer
 
                 CargarTabla();
                 CargarEmpresa();
+                CargarSucursal();
             }
             else
             {
