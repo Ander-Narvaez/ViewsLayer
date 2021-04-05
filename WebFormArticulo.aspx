@@ -74,21 +74,21 @@
                                 <div class="col-12 d-flex flex-column mt-3">
                                     <div class="d-flex">
                                         <asp:Label ID="lblarticulo" runat="server" Text="Articulo" CssClass="" ToolTip="" Width="100px"></asp:Label>
-                                        <asp:TextBox ID="txtARTICULO" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
+                                        <asp:TextBox ID="txtArticulo" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
                                     </div>
                                 </div>
                                 <%-- CATEGORIA --%>
                                 <div class="col-12 d-flex flex-column mt-3">
                                     <div class="d-flex">
                                         <asp:Label ID="lblcategoria" runat="server" Text="Categoria" CssClass="" ToolTip="" Width="100px"></asp:Label>
-                                        <asp:TextBox ID="txtCATEGORIA" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
+                                        <asp:TextBox ID="txtCategoria" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
                                     </div>
                                 </div>
                                 <%-- PRECIO --%>
                                 <div class="col-12 d-flex flex-column mt-3">
                                     <div class="d-flex">
                                         <asp:Label ID="lblprecio" runat="server" Text="Precio" CssClass="" ToolTip="" Width="100px"></asp:Label>
-                                        <asp:TextBox ID="txtPRECIO" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
+                                        <asp:TextBox ID="txtPrecio" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
                                     </div>
                                 </div>
 
