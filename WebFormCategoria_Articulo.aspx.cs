@@ -144,7 +144,7 @@ namespace ViewsLayer
             return OracleExecute(op);
         }
 
-        private int parse(String num)
+        private int parseInt(String num)
         {
             try
             {
@@ -158,7 +158,7 @@ namespace ViewsLayer
 
         private String OracleExecute(string op)
         {
-            String result = Ws.MaintenanceCategoria_Articulo(txtCodigo.Text, txtDescripcion.Text, parse(txtImpuesto.Text), op);
+            String result = Ws.MaintenanceCategoria_Articulo(txtCodigo.Text, txtDescripcion.Text, parseInt(txtImpuesto.Text), op);
             return result;
 
         }

@@ -20,6 +20,7 @@ namespace ViewsLayer
                 Session["op"] = "";
 
                 CargarTabla();
+                CargarCategoria();
             }
             else
             {
@@ -40,12 +41,34 @@ namespace ViewsLayer
             string m = "";
             try
             {
-                decimal precio = Convert.ToDecimal((String)Session["PRECIO"]);
+                Decimal precio = Convert.ToDecimal((String)Session["PRECIO"]);
                 DataSet Dts = new DataSet();
                 Dts = Ws.GetListArticulo("", "", precio, "S");
 
                 tbl.DataSource = Dts;
                 tbl.DataBind();
+            }
+            catch (Exception es)
+            {
+                m = es.Message;
+                informar(m);
+            }
+        }
+
+        public void CargarCategoria()
+        {
+            string m = "";
+            try
+            {
+                int impuesto = Convert.ToInt32((String)Session["IMPUESTO"]);
+                DataSet Dts = new DataSet();
+                Dts = Ws.GetListCategoria_articulo("", "", impuesto, "S");
+
+                txtCategoria.Items.Clear();
+                txtCategoria.DataSource = Dts;
+                txtCategoria.Items.Add(new ListItem(""));
+                txtCategoria.DataTextField = "CODIGO";
+                txtCategoria.DataBind();
             }
             catch (Exception es)
             {
@@ -70,7 +93,7 @@ namespace ViewsLayer
         {
             Session["op"] = "I";
             txtArticulo.Text = "";
-            txtCategoria.Text = "";
+            txtCategoria.SelectedIndex = 0;
             txtPrecio.Text = "";
 
             alertModal.Visible = false;
@@ -87,7 +110,8 @@ namespace ViewsLayer
 
                 Session["op"] = "U";
                 txtArticulo.Text = row.Cells[1].Text;
-                txtCategoria.Text = row.Cells[2].Text;
+                ListItem item2 = txtCategoria.Items.FindByValue(row.Cells[2].Text);
+                txtCategoria.SelectedIndex = txtCategoria.Items.IndexOf(item2);
                 txtPrecio.Text = row.Cells[3].Text;
 
                 btnEliminar.Visible = true;
@@ -144,7 +168,7 @@ namespace ViewsLayer
             return OracleExecute(op);
         }
 
-        private decimal parse(String num)
+        private Decimal parseDecimal(String num)
         {
             try
             {
@@ -158,7 +182,7 @@ namespace ViewsLayer
 
         private String OracleExecute(string op)
         {
-            String result = Ws.MaintenanceArticulo(txtArticulo.Text, txtCategoria.Text, parse(txtPrecio.Text), op);
+            String result = Ws.MaintenanceArticulo(txtArticulo.Text, txtCategoria.Text, parseDecimal(txtPrecio.Text), op);
             return result;
 
         }
