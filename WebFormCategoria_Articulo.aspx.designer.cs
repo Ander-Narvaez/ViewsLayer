@@ -96,13 +96,13 @@ namespace ViewsLayer
         protected global::System.Web.UI.WebControls.Label lblcodigo;
 
         /// <summary>
-        /// Control txtCODIGO.
+        /// Control txtCodigo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCODIGO;
+        protected global::System.Web.UI.WebControls.TextBox txtCodigo;
 
         /// <summary>
         /// Control lbldescripcion.
@@ -114,13 +114,13 @@ namespace ViewsLayer
         protected global::System.Web.UI.WebControls.Label lbldescripcion;
 
         /// <summary>
-        /// Control txtDESCRPCION.
+        /// Control txtDescripcion.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDESCRPCION;
+        protected global::System.Web.UI.WebControls.TextBox txtDescripcion;
 
         /// <summary>
         /// Control lblimpuesto.
@@ -132,13 +132,13 @@ namespace ViewsLayer
         protected global::System.Web.UI.WebControls.Label lblimpuesto;
 
         /// <summary>
-        /// Control txtIMPUESTO.
+        /// Control txtImpuesto.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtIMPUESTO;
+        protected global::System.Web.UI.WebControls.TextBox txtImpuesto;
 
         /// <summary>
         /// Control alertModal.
