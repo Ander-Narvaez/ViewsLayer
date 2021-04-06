@@ -7,12 +7,19 @@
             <div class="col-form-label  pl-3 text-capitalize">
                 <%--  Cambiar el nombre del objeto--%>
                 <label runat="server">Administrar</label>
-                <asp:Label ID="Lblfiltro" runat="server" Text="Buscar" CssClass="" ToolTip="" Width="100px"></asp:Label>
-                <asp:TextBox ID="TextFiltrar" runat="server" ReadOnly="false" CssClass="form-control ml-4" OnTextChanged="TextFiltrar_TextChanged"></asp:TextBox>
 
-                <%--Nombre de la pagina--%>
-            </div>
+                <%-- Filtrar clientes --%>
+                <div class:"form-group">
+                    <asp:Label ID="lblCedula1" CssClass="form-control-stactic" runat ="server" Text="Ingrese su cedula"></asp:Label>
+                    <asp:TextBox ID ="TextCedula" runat ="server"></asp:TextBox>
+
+                    <asp:Button ID="btnBuscar" runat ="server" Text ="Buscar" onClick="btnBuscar_Click" /> 
+
         </div>
+
+        <%--Nombre de la pagina--%>
+    </div>
+    </div>
     </div>
     <!-- Button trigger modal -->
     <div class="row mb-3 ">
