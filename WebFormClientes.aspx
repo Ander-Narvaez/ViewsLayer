@@ -10,10 +10,8 @@
 
                 <%-- Filtrar clientes --%>
                 <div class:"form-group">
-                    <asp:Label ID="lblCedula1" CssClass="form-control-stactic" runat ="server" Text="Ingrese su cedula"></asp:Label>
-                    <asp:TextBox ID ="TextCedula" runat ="server"></asp:TextBox>
-
-                    <asp:Button ID="btnBuscar" runat ="server" Text ="Buscar" onClick="btnBuscar_Click" /> 
+                    <asp:Label ID="lblCedula1" CssClass="form-control-stactic" runat ="server" Text="Buscar por cedula"></asp:Label>
+                    <asp:TextBox ID ="TextCedula" runat ="server" OnTextChanged="btnBuscar_Click" AutoPostBack="true"></asp:TextBox>
 
         </div>
 
