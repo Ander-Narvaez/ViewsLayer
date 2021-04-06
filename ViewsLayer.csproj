@@ -107,6 +107,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="About.aspx" />
+    <Content Include="Img\img.1.jpeg" />
+    <Content Include="Img\img.2.jpeg" />
+    <Content Include="Img\img.3.jpeg" />
+    <Content Include="Img\img.4.jpeg" />
     <Content Include="WebFormSucursal.aspx" />
     <Content Include="WebFormUsuarios.aspx" />
     <None Include="Connected Services\ServiceReference\WebService.disco" />
