@@ -43,7 +43,7 @@ namespace ViewsLayer
             try
             {
                 DataSet Dts = new DataSet();
-                Dts = Ws.GetListProveedores("", "", "", "", "", "", "", "S");
+                Dts = Ws.GetListProveedores("","", "", "", "", "", "", "S");
 
                 tbl.DataSource = Dts;
                 tbl.DataBind();
@@ -61,7 +61,7 @@ namespace ViewsLayer
             try
             {
                 DataSet Dts = new DataSet();
-                Dts = Ws.GetListEmpresa("", "", "", "", "", "S");
+                Dts = Ws.GetListSucursal("", "", "", "", "", "", "S");
 
                 txtEmpresa.Items.Clear();
                 txtEmpresa.DataSource = Dts;
