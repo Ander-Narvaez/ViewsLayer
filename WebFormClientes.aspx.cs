@@ -150,13 +150,15 @@ namespace ViewsLayer
             return result;
         }
 
-        protected void TextFiltrar_TextChanged(object sender, EventArgs e)
+        protected void btnBuscar_Click(object sender, EventArgs e)
         {
             string m = "";
             try
             {
                 DataSet Dts = new DataSet();
-                Dts = Ws.GetListClientes("", "", "", "", "F");
+                Dts = Ws.GetListClientes( TextCedula.Text, "", "", "", "F");
+
+
 
                 tbl.DataSource = Dts;
                 tbl.DataBind();
@@ -167,5 +169,7 @@ namespace ViewsLayer
                 informar(m);
             }
         }
+
+
     }
 }
