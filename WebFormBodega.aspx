@@ -95,7 +95,7 @@
                                 <div class="col-12 d-flex flex-column mt-3">
                                     <div class="d-flex">
                                         <asp:Label ID="lblinventario" runat="server" Text="Inventario" CssClass="" ToolTip="" Width="100px"></asp:Label>
-                                        <asp:TextBox ID="txtInventario" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
+                                        <asp:DropDownList ID="txtInventario" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:DropDownList>
                                     </div>
                                 </div>
                                 <%-- NOMBRE  --%>
