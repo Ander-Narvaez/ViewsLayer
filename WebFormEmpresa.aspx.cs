@@ -70,9 +70,9 @@ namespace ViewsLayer
             txtEmail.Text = "";
             txtTelefono.Text = "";
 
+            txtEmpresa.ReadOnly = false;
             alertModal.Visible = false;
             btnEliminar.Visible = false;
-            btnSempleadoAgregar.Visible = false;
 
             OnModal(1);
         }
@@ -90,6 +90,7 @@ namespace ViewsLayer
                 txtEmail.Text = row.Cells[4].Text;
                 txtTelefono.Text = row.Cells[5].Text;
 
+                txtEmpresa.ReadOnly = true;
                 btnEliminar.Visible = true;
                 tbl.SelectedIndex = -1;
                 alertModal.Visible = false;
@@ -150,8 +151,5 @@ namespace ViewsLayer
             return result;
         }
 
-        protected void btnSempleadoAgregar_Click(object sender, EventArgs e)
-        {
-        }
     }
 }
