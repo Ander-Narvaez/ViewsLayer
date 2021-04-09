@@ -39,7 +39,7 @@ namespace ViewsLayer
             try
             {
                 DataSet Dts = new DataSet();
-                Dts = Ws.GetListClientes("", "", "", "", "S");
+                Dts = Ws.GetListClientes("", "", "", "", "G");
 
                 tbl.DataSource = Dts;
                 tbl.DataBind();
