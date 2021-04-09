@@ -72,6 +72,7 @@ namespace ViewsLayer
             txtApellido_1.Text = "";
             txtApellido_2.Text = "";
 
+            txtCedula.ReadOnly = false;
             alertModal.Visible = false;
             btnEliminar.Visible = false;
 
@@ -90,6 +91,7 @@ namespace ViewsLayer
                 txtApellido_1.Text = row.Cells[3].Text;
                 txtApellido_2.Text = row.Cells[4].Text;
 
+                txtCedula.ReadOnly = true;
                 btnEliminar.Visible = true;
                 tbl.SelectedIndex = -1;
                 alertModal.Visible = false;
@@ -140,7 +142,6 @@ namespace ViewsLayer
         private String OracleExecute()
         {
             String op = (string)Session["op"];
-
             return OracleExecute(op);
         }
 
@@ -156,10 +157,7 @@ namespace ViewsLayer
             try
             {
                 DataSet Dts = new DataSet();
-                Dts = Ws.GetListClientes( TextCedula.Text, "", "", "", "F");
-
-
-
+                Dts = Ws.GetListClientes(TextCedula.Text, "", "", "", "F");
                 tbl.DataSource = Dts;
                 tbl.DataBind();
             }
@@ -170,6 +168,19 @@ namespace ViewsLayer
             }
         }
 
-
+        protected void btnMostraTodo_Click(object sender, EventArgs e)
+        {
+            string m = "";
+            try
+            {
+                CargarTabla();
+                TextCedula.Text = "";
+            }
+            catch (Exception es)
+            {
+                m = es.Message;
+                informar(m);
+            }
+        }
     }
 }

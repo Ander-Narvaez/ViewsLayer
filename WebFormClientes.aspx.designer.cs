@@ -15,15 +15,6 @@ namespace ViewsLayer
     {
 
         /// <summary>
-        /// Control lblCedula1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCedula1;
-
-        /// <summary>
         /// Control TextCedula.
         /// </summary>
         /// <remarks>
@@ -31,6 +22,15 @@ namespace ViewsLayer
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox TextCedula;
+
+        /// <summary>
+        /// Control btnMostrar.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnMostrar;
 
         /// <summary>
         /// Control btnCrear.
@@ -87,13 +87,13 @@ namespace ViewsLayer
         protected global::System.Web.UI.WebControls.Label lblTitleModal;
 
         /// <summary>
-        /// Control lblcedula.
+        /// Control lbltxtCedula.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblcedula;
+        protected global::System.Web.UI.WebControls.Label lbltxtCedula;
 
         /// <summary>
         /// Control txtCedula.
@@ -105,13 +105,13 @@ namespace ViewsLayer
         protected global::System.Web.UI.WebControls.TextBox txtCedula;
 
         /// <summary>
-        /// Control lblnombre.
+        /// Control lblNombre.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblnombre;
+        protected global::System.Web.UI.WebControls.Label lblNombre;
 
         /// <summary>
         /// Control txtNombre.
@@ -123,13 +123,13 @@ namespace ViewsLayer
         protected global::System.Web.UI.WebControls.TextBox txtNombre;
 
         /// <summary>
-        /// Control lblapellido_1.
+        /// Control lblApellido_1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblapellido_1;
+        protected global::System.Web.UI.WebControls.Label lblApellido_1;
 
         /// <summary>
         /// Control txtApellido_1.
@@ -139,6 +139,15 @@ namespace ViewsLayer
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtApellido_1;
+
+        /// <summary>
+        /// Control lbltxtApellido_2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lbltxtApellido_2;
 
         /// <summary>
         /// Control txtApellido_2.
