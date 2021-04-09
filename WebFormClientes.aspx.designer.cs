@@ -123,31 +123,40 @@ namespace ViewsLayer
         protected global::System.Web.UI.WebControls.TextBox txtNombre;
 
         /// <summary>
-        /// Control lblapellido_1.
+        /// Control lblapellido1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblapellido_1;
+        protected global::System.Web.UI.WebControls.Label lblapellido1;
 
         /// <summary>
-        /// Control txtApellido_1.
+        /// Control txtApellido1.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtApellido_1;
+        protected global::System.Web.UI.WebControls.TextBox txtApellido1;
 
         /// <summary>
-        /// Control txtApellido_2.
+        /// Control lblapellido2.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtApellido_2;
+        protected global::System.Web.UI.WebControls.Label lblapellido2;
+
+        /// <summary>
+        /// Control txtApellido2.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtApellido2;
 
         /// <summary>
         /// Control alertModal.

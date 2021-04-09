@@ -6,7 +6,6 @@
         <div class="col-12 text-left">
             <div class="col-form-label  pl-3 text-capitalize">
                 <%--  Cambiar el nombre del objeto--%>
-                <label runat="server">Administrar</label>
                 <asp:Label ID="Lblfiltro" runat="server" Text="Buscar" CssClass="" ToolTip="" Width="100px"></asp:Label>
                 <asp:TextBox ID="TextFiltrar" runat="server" ReadOnly="false" CssClass="form-control ml-4" OnTextChanged="TextFiltrar_TextChanged"></asp:TextBox>
 
@@ -88,15 +87,15 @@
                                 <%-- APELLIDO_1 --%>
                                 <div class="col-12 d-flex flex-column mt-3">
                                     <div class="d-flex">
-                                        <asp:Label ID="lblapellido_1" runat="server" Text="Apellido 1" CssClass="" ToolTip="" Width="100px"></asp:Label>
-                                        <asp:TextBox ID="txtApellido_1" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
+                                        <asp:Label ID="lblapellido1" runat="server" Text="Apellido 1" CssClass="" ToolTip="" Width="100px"></asp:Label>
+                                        <asp:TextBox ID="txtApellido1" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
                                     </div>
                                 </div>
                                 <%-- APELLIDO_2 --%>
                                 <div class="col-12 d-flex flex-column mt-3">
                                     <div class="d-flex">
-                                        <asp:Label ID="lblapellido_2" Text="Apellido 2" CssClass="" ToolTip="" Width="100px"></asp:Label>
-                                        <asp:TextBox ID="txtApellido_2" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
+                                        <asp:Label ID="lblapellido2" runat="server" Text="Apellido 2" CssClass="" ToolTip="" Width="100px"></asp:Label>
+                                        <asp:TextBox ID="txtApellido2" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
                                     </div>
                                 </div>
 
@@ -113,6 +112,8 @@
                                         </button>
                                     </div>
                                 </div>
+                                                                <%-- ALERTA ERROR --%>
+
                                 <div class="col-12 d-flex mt-3 justify-content-center ">
                                     <asp:Button ID="btnGuardar" runat="server" Text="Guardar" CssClass="form-control btn-primary mr-3" OnClick="btnGuardar_Click" />
                                     <asp:Button ID="btnEliminar" runat="server" Text="Eliminar" CssClass="form-control btn-primary mr-3" OnClick="btnEliminar_Click" />

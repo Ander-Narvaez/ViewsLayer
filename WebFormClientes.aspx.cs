@@ -39,7 +39,7 @@ namespace ViewsLayer
             try
             {
                 DataSet Dts = new DataSet();
-                Dts = Ws.GetListClientes("", "", "", "", "S");
+                Dts = Ws.GetListClientes("", "", "", "", "G");
 
                 tbl.DataSource = Dts;
                 tbl.DataBind();
@@ -69,8 +69,8 @@ namespace ViewsLayer
             Session["op"] = "I";
             txtCedula.Text = "";
             txtNombre.Text = "";
-            txtApellido_1.Text = "";
-            txtApellido_2.Text = "";
+            txtApellido1.Text = "";
+            txtApellido2.Text = "";
 
             alertModal.Visible = false;
             btnEliminar.Visible = false;
@@ -84,11 +84,12 @@ namespace ViewsLayer
             {
                 GridViewRow row = tbl.Rows[tbl.SelectedIndex];
 
+                txtApellido1.Visible = false;
+                txtApellido2.Visible = false;
+
                 Session["op"] = "U";
                 txtCedula.Text = row.Cells[1].Text;
                 txtNombre.Text = row.Cells[2].Text;
-                txtApellido_1.Text = row.Cells[3].Text;
-                txtApellido_2.Text = row.Cells[4].Text;
 
                 btnEliminar.Visible = true;
                 tbl.SelectedIndex = -1;
@@ -146,7 +147,7 @@ namespace ViewsLayer
 
         private String OracleExecute(string op)
         {
-            String result = Ws.MaintenanceClientes(txtCedula.Text, txtNombre.Text, txtApellido_1.Text, txtApellido_2.Text, op);
+            String result = Ws.MaintenanceClientes(txtCedula.Text, txtNombre.Text, txtApellido1.Text, txtApellido2.Text, op);
             return result;
         }
 
