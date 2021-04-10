@@ -217,7 +217,7 @@ namespace ViewsLayer
 
         private String OracleExecute(string op)
         {
-            String result = Ws.MaintenanceEstante(txtEmpresa.Text, txtSucursal.Text, txtBodega.Text, txtSeccion.Text, txtDescripcion.Text, op);
+            String result = Ws.MaintenanceSeccion(txtEmpresa.Text, txtSucursal.Text, txtBodega.Text, txtSeccion.Text, txtDescripcion.Text, op);
             return result;
         }
     }
