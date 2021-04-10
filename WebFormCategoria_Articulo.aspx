@@ -73,7 +73,7 @@
                                 <%-- CODIGO --%>
                                 <div class="col-12 d-flex flex-column mt-3">
                                     <div class="d-flex">
-                                        <asp:Label ID="lblcodigo" runat="server" Text="Codigo" CssClass="" ToolTip="" Width="100px"></asp:Label>
+                                        <asp:Label ID="lblcodigo" runat="server" Text="Categoria Articulo" CssClass="" ToolTip="" Width="100px"></asp:Label>
                                         <asp:TextBox ID="txtCodigo" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
                                     </div>
                                 </div>
