@@ -46,17 +46,17 @@ namespace ViewsLayer.ServiceReference {
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaintenanceArticulo", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        string MaintenanceArticulo(string pARTICULO, string pCATEGORIA, decimal pPRECIO, string pACCION);
+        string MaintenanceArticulo(string pARTICULO, string pNOMBRE_ARTICULO, string pCATEGORIA, decimal pPRECIO, string pACCION);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaintenanceArticulo", ReplyAction="*")]
-        System.Threading.Tasks.Task<string> MaintenanceArticuloAsync(string pARTICULO, string pCATEGORIA, decimal pPRECIO, string pACCION);
+        System.Threading.Tasks.Task<string> MaintenanceArticuloAsync(string pARTICULO, string pNOMBRE_ARTICULO, string pCATEGORIA, decimal pPRECIO, string pACCION);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListArticulo", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
-        System.Data.DataSet GetListArticulo(string pARTICULO, string pCATEGORIA, decimal pPRECIO, string pACCION);
+        System.Data.DataSet GetListArticulo(string pARTICULO, string pNOMBRE_ARTICULO, string pCATEGORIA, decimal pPRECIO, string pACCION);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/GetListArticulo", ReplyAction="*")]
-        System.Threading.Tasks.Task<System.Data.DataSet> GetListArticuloAsync(string pARTICULO, string pCATEGORIA, decimal pPRECIO, string pACCION);
+        System.Threading.Tasks.Task<System.Data.DataSet> GetListArticuloAsync(string pARTICULO, string pNOMBRE_ARTICULO, string pCATEGORIA, decimal pPRECIO, string pACCION);
         
         [System.ServiceModel.OperationContractAttribute(Action="http://tempuri.org/MaintenanceCategoria_Articulo", ReplyAction="*")]
         [System.ServiceModel.XmlSerializerFormatAttribute(SupportFaults=true)]
@@ -286,20 +286,20 @@ namespace ViewsLayer.ServiceReference {
             return base.Channel.GetListSucursalAsync(pEMPRESA, pSUCURSAL, pNOMBRE, pUBICACION, pEMAIL, pTELEFONO, pACCION);
         }
         
-        public string MaintenanceArticulo(string pARTICULO, string pCATEGORIA, decimal pPRECIO, string pACCION) {
-            return base.Channel.MaintenanceArticulo(pARTICULO, pCATEGORIA, pPRECIO, pACCION);
+        public string MaintenanceArticulo(string pARTICULO, string pNOMBRE_ARTICULO, string pCATEGORIA, decimal pPRECIO, string pACCION) {
+            return base.Channel.MaintenanceArticulo(pARTICULO, pNOMBRE_ARTICULO, pCATEGORIA, pPRECIO, pACCION);
         }
         
-        public System.Threading.Tasks.Task<string> MaintenanceArticuloAsync(string pARTICULO, string pCATEGORIA, decimal pPRECIO, string pACCION) {
-            return base.Channel.MaintenanceArticuloAsync(pARTICULO, pCATEGORIA, pPRECIO, pACCION);
+        public System.Threading.Tasks.Task<string> MaintenanceArticuloAsync(string pARTICULO, string pNOMBRE_ARTICULO, string pCATEGORIA, decimal pPRECIO, string pACCION) {
+            return base.Channel.MaintenanceArticuloAsync(pARTICULO, pNOMBRE_ARTICULO, pCATEGORIA, pPRECIO, pACCION);
         }
         
-        public System.Data.DataSet GetListArticulo(string pARTICULO, string pCATEGORIA, decimal pPRECIO, string pACCION) {
-            return base.Channel.GetListArticulo(pARTICULO, pCATEGORIA, pPRECIO, pACCION);
+        public System.Data.DataSet GetListArticulo(string pARTICULO, string pNOMBRE_ARTICULO, string pCATEGORIA, decimal pPRECIO, string pACCION) {
+            return base.Channel.GetListArticulo(pARTICULO, pNOMBRE_ARTICULO, pCATEGORIA, pPRECIO, pACCION);
         }
         
-        public System.Threading.Tasks.Task<System.Data.DataSet> GetListArticuloAsync(string pARTICULO, string pCATEGORIA, decimal pPRECIO, string pACCION) {
-            return base.Channel.GetListArticuloAsync(pARTICULO, pCATEGORIA, pPRECIO, pACCION);
+        public System.Threading.Tasks.Task<System.Data.DataSet> GetListArticuloAsync(string pARTICULO, string pNOMBRE_ARTICULO, string pCATEGORIA, decimal pPRECIO, string pACCION) {
+            return base.Channel.GetListArticuloAsync(pARTICULO, pNOMBRE_ARTICULO, pCATEGORIA, pPRECIO, pACCION);
         }
         
         public string MaintenanceCategoria_Articulo(string pCODIGO, string pDESCRIPCION, int pIMPUESTO, string pACCION) {

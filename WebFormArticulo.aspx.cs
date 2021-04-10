@@ -20,6 +20,7 @@ namespace ViewsLayer
                 Session["op"] = "";
 
                 CargarTabla();
+                CargarCategoria();
             }
             else
             {
@@ -42,10 +43,31 @@ namespace ViewsLayer
             {
                 decimal precio = Convert.ToDecimal((String)Session["PRECIO"]);
                 DataSet Dts = new DataSet();
-                Dts = Ws.GetListArticulo("", "", precio, "S");
+                Dts = Ws.GetListArticulo("", "", "", precio, "S");
 
                 tbl.DataSource = Dts;
                 tbl.DataBind();
+            }
+            catch (Exception es)
+            {
+                m = es.Message;
+                informar(m);
+            }
+        }
+
+        public void CargarCategoria()
+        {
+            String m = "";
+            try
+            {
+                DataSet Dts = new DataSet();
+                Dts = Ws.GetListCategoria_articulo( "", "", 0 , "S");
+
+                txtCategoria.Items.Clear();
+                txtCategoria.DataSource = Dts;
+                txtCategoria.Items.Add(new ListItem(""));
+                txtCategoria.DataTextField = "CODIGO";
+                txtCategoria.DataBind();
             }
             catch (Exception es)
             {
@@ -70,7 +92,8 @@ namespace ViewsLayer
         {
             Session["op"] = "I";
             txtArticulo.Text = "";
-            txtCategoria.Text = "";
+            txtNombre_articulo.Text = "";
+            txtCategoria.SelectedIndex = 0;
             txtPrecio.Text = "";
 
             alertModal.Visible = false;
@@ -87,8 +110,10 @@ namespace ViewsLayer
 
                 Session["op"] = "U";
                 txtArticulo.Text = row.Cells[1].Text;
-                txtCategoria.Text = row.Cells[2].Text;
-                txtPrecio.Text = row.Cells[3].Text;
+                txtNombre_articulo.Text = row.Cells[2].Text;
+                ListItem item1 = txtCategoria.Items.FindByValue(row.Cells[3].Text);
+                txtCategoria.SelectedIndex = txtCategoria.Items.IndexOf(item1);
+                txtPrecio.Text = row.Cells[5].Text;
 
                 btnEliminar.Visible = true;
                 tbl.SelectedIndex = -1;
@@ -158,7 +183,7 @@ namespace ViewsLayer
 
         private String OracleExecute(string op)
         {
-            String result = Ws.MaintenanceArticulo(txtArticulo.Text, txtCategoria.Text, parse(txtPrecio.Text), op);
+            String result = Ws.MaintenanceArticulo(txtArticulo.Text, txtNombre_articulo.Text, txtCategoria.SelectedValue.ToString(), parse(txtPrecio.Text), op);
             return result;
 
         }
