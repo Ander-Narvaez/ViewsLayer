@@ -74,35 +74,35 @@
                                 <div class="col-12 d-flex flex-column mt-3">
                                     <div class="d-flex">
                                         <asp:Label ID="lblempresa" runat="server" Text="Empresa" CssClass="" ToolTip="" Width="100px"></asp:Label>
-                                        <asp:DropDownList ID="txtEMPRESA" runat="server" ReadOnly="true" CssClass="form-control ml-4"></asp:DropDownList>
+                                        <asp:DropDownList ID="txtEmpresa" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:DropDownList>
                                     </div>
                                 </div>
                                 <%--  SUCURSAL--%>
                                 <div class="col-12 d-flex flex-column mt-3">
                                     <div class="d-flex">
                                         <asp:Label ID="lblsucursal" runat="server" Text="Sucursal" CssClass="" ToolTip="" Width="100px"></asp:Label>
-                                        <asp:DropDownList ID="txtSUCURSAL" runat="server" ReadOnly="true" CssClass="form-control ml-4"></asp:DropDownList>
+                                        <asp:DropDownList ID="txtSucursal" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:DropDownList>
                                     </div>
                                 </div>
                                 <%--  BODEGA  --%>
                                 <div class="col-12 d-flex flex-column mt-3">
                                     <div class="d-flex">
                                         <asp:Label ID="lblbodega" runat="server" Text="Bodega" CssClass="" ToolTip="" Width="100px"></asp:Label>
-                                        <asp:DropDownList ID="txtBODEGA" runat="server" ReadOnly="true" CssClass="form-control ml-4"></asp:DropDownList>
+                                        <asp:DropDownList ID="txtBodega" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:DropDownList>
                                     </div>
                                 </div>
                                 <%--  SECCION --%>
                                 <div class="col-12 d-flex flex-column mt-3">
                                     <div class="d-flex">
                                         <asp:Label ID="lblseccion" runat="server" Text="Sección" CssClass="" ToolTip="" Width="100px"></asp:Label>
-                                        <asp:TextBox ID="txtSECCION" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
+                                        <asp:TextBox ID="txtSeccion" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
                                     </div>
                                 </div>                              
                                 <%-- DESCRIPCION --%>
                                 <div class="col-12 d-flex flex-column mt-3">
                                     <div class="d-flex">
                                         <asp:Label ID="lbldescripcion" runat="server" Text="Descripción" CssClass="" ToolTip="" Width="100px"></asp:Label>
-                                        <asp:TextBox ID="txtDESCRIPCION" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
+                                        <asp:TextBox ID="txtDescripcion" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
                                     </div>
                                 </div>
 
