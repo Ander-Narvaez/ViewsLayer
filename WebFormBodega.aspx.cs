@@ -234,7 +234,7 @@ namespace ViewsLayer
 
         private String OracleExecute(string op)
         {
-            String result = Ws.MaintenanceBodega(txtEmpresa.SelectedValue.ToString(), txtSucursal.SelectedValue.ToString(), txtBodega.Text, parse(txtInventario.Text), txtNombre.Text, txtUbicacion.Text, op);
+            String result = Ws.MaintenanceBodega(txtEmpresa.SelectedValue.ToString(), txtSucursal.SelectedValue.ToString(), txtBodega.Text, parse(txtInventario.SelectedValue.ToString()), txtNombre.Text, txtUbicacion.Text, op);
             return result;
         }
 
