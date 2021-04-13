@@ -96,13 +96,13 @@ namespace ViewsLayer
         protected global::System.Web.UI.WebControls.Label lblempresa;
 
         /// <summary>
-        /// Control txtEMPRESA.
+        /// Control txtEmpresa.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList txtEMPRESA;
+        protected global::System.Web.UI.WebControls.DropDownList txtEmpresa;
 
         /// <summary>
         /// Control lblsucursal.
@@ -114,13 +114,13 @@ namespace ViewsLayer
         protected global::System.Web.UI.WebControls.Label lblsucursal;
 
         /// <summary>
-        /// Control txtSUCURSAL.
+        /// Control txtSucursal.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList txtSUCURSAL;
+        protected global::System.Web.UI.WebControls.DropDownList txtSucursal;
 
         /// <summary>
         /// Control lblproveedor.
@@ -132,13 +132,13 @@ namespace ViewsLayer
         protected global::System.Web.UI.WebControls.Label lblproveedor;
 
         /// <summary>
-        /// Control txtPROVEEDOR.
+        /// Control txtProveedor.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList txtPROVEEDOR;
+        protected global::System.Web.UI.WebControls.DropDownList txtProveedor;
 
         /// <summary>
         /// Control lblinventario.
@@ -150,13 +150,13 @@ namespace ViewsLayer
         protected global::System.Web.UI.WebControls.Label lblinventario;
 
         /// <summary>
-        /// Control txtINVENTARIO.
+        /// Control txtInventario.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtINVENTARIO;
+        protected global::System.Web.UI.WebControls.TextBox txtInventario;
 
         /// <summary>
         /// Control lblarticulo.
@@ -168,13 +168,13 @@ namespace ViewsLayer
         protected global::System.Web.UI.WebControls.Label lblarticulo;
 
         /// <summary>
-        /// Control txtARTICULO.
+        /// Control txtArticulo.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtARTICULO;
+        protected global::System.Web.UI.WebControls.DropDownList txtArticulo;
 
         /// <summary>
         /// Control lblmaximos.
@@ -186,13 +186,13 @@ namespace ViewsLayer
         protected global::System.Web.UI.WebControls.Label lblmaximos;
 
         /// <summary>
-        /// Control txtMAXIMOS.
+        /// Control txtMaximos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMAXIMOS;
+        protected global::System.Web.UI.WebControls.TextBox txtMaximos;
 
         /// <summary>
         /// Control lblminimos.
@@ -204,13 +204,13 @@ namespace ViewsLayer
         protected global::System.Web.UI.WebControls.Label lblminimos;
 
         /// <summary>
-        /// Control txtMINIMOS.
+        /// Control txtMinimos.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtMINIMOS;
+        protected global::System.Web.UI.WebControls.TextBox txtMinimos;
 
         /// <summary>
         /// Control lblexistencias.
@@ -222,13 +222,13 @@ namespace ViewsLayer
         protected global::System.Web.UI.WebControls.Label lblexistencias;
 
         /// <summary>
-        /// Control txtEXISTENCIAS.
+        /// Control txtExistencias.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtEXISTENCIAS;
+        protected global::System.Web.UI.WebControls.TextBox txtExistencias;
 
         /// <summary>
         /// Control alertModal.

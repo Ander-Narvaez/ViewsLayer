@@ -74,56 +74,56 @@
                                 <div class="col-12 d-flex flex-column mt-3">
                                     <div class="d-flex">
                                         <asp:Label ID="lblempresa" runat="server" Text="Empresa" CssClass="" ToolTip="" Width="100px"></asp:Label>
-                                        <asp:DropDownList ID="txtEMPRESA" runat="server" ReadOnly="true" CssClass="form-control ml-4"></asp:DropDownList>
+                                        <asp:DropDownList ID="txtEmpresa" runat="server" ReadOnly="true" CssClass="form-control ml-4"></asp:DropDownList>
                                     </div>
                                 </div>
                                 <%--  SUCURSAL --%>
                                 <div class="col-12 d-flex flex-column mt-3">
                                     <div class="d-flex">
                                         <asp:Label ID="lblsucursal" runat="server" Text="Sucursal" CssClass="" ToolTip="" Width="100px"></asp:Label>
-                                        <asp:DropDownList ID="txtSUCURSAL" runat="server" ReadOnly="true" CssClass="form-control ml-4"></asp:DropDownList>
+                                        <asp:DropDownList ID="txtSucursal" runat="server" ReadOnly="true" CssClass="form-control ml-4"></asp:DropDownList>
                                     </div>
                                 </div>
                                 <%--  PROVEEDOR --%>
                                 <div class="col-12 d-flex flex-column mt-3">
                                     <div class="d-flex">
                                         <asp:Label ID="lblproveedor" runat="server" Text="Proveedor" CssClass="" ToolTip="" Width="100px"></asp:Label>
-                                        <asp:DropDownList ID="txtPROVEEDOR" runat="server" ReadOnly="true" CssClass="form-control ml-4"></asp:DropDownList>
+                                        <asp:DropDownList ID="txtProveedor" runat="server" ReadOnly="true" CssClass="form-control ml-4"></asp:DropDownList>
                                     </div>
                                 </div>
                                 <%--  INVENTARIO --%>
                                 <div class="col-12 d-flex flex-column mt-3">
                                     <div class="d-flex">
                                         <asp:Label ID="lblinventario" runat="server" Text="Inventario" CssClass="" ToolTip="" Width="100px"></asp:Label>
-                                        <asp:TextBox ID="txtINVENTARIO" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
+                                        <asp:TextBox ID="txtInventario" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
                                     </div>
                                 </div>
                                 <%--  ARTICULO --%>
                                 <div class="col-12 d-flex flex-column mt-3">
                                     <div class="d-flex">
                                         <asp:Label ID="lblarticulo" runat="server" Text="Articulo" CssClass="" ToolTip="" Width="100px"></asp:Label>
-                                        <asp:TextBox ID="txtARTICULO" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
+                                        <asp:DropDownList ID="txtArticulo" runat="server" ReadOnly="true" CssClass="form-control ml-4"></asp:DropDownList>
                                     </div>
                                 </div>
                                 <%-- MAXIMOS --%>
                                 <div class="col-12 d-flex flex-column mt-3">
                                     <div class="d-flex">
                                         <asp:Label ID="lblmaximos" runat="server" Text="Máximos" CssClass="" ToolTip="" Width="100px"></asp:Label>
-                                        <asp:TextBox ID="txtMAXIMOS" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
+                                        <asp:TextBox ID="txtMaximos" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
                                     </div>
                                 </div>
                                 <%-- MINIMOS --%>
                                 <div class="col-12 d-flex flex-column mt-3">
                                     <div class="d-flex">
                                         <asp:Label ID="lblminimos" runat="server" Text="Mínimos" CssClass="" ToolTip="" Width="100px"></asp:Label>
-                                        <asp:TextBox ID="txtMINIMOS" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
+                                        <asp:TextBox ID="txtMinimos" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
                                     </div>
                                 </div>
                                 <%-- EXISTENCIAS --%>
                                 <div class="col-12 d-flex flex-column mt-3">
                                     <div class="d-flex">
                                         <asp:Label ID="lblexistencias" runat="server" Text="Existencias" CssClass="" ToolTip="" Width="100px"></asp:Label>
-                                        <asp:TextBox ID="txtEXISTENCIAS" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
+                                        <asp:TextBox ID="txtExistencias" runat="server" ReadOnly="false" CssClass="form-control ml-4"></asp:TextBox>
                                     </div>
                                 </div>
 
