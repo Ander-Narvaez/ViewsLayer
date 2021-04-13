@@ -105,9 +105,9 @@ namespace ViewsLayer
                 int inventario = Convert.ToInt32((String)Session["INVENTARIO"]);
                 int maximos = Convert.ToInt32((String)Session["MAXIMOS"]);
                 int minimos = Convert.ToInt32((String)Session["MINIMOS"]);
-                int existentes = Convert.ToInt32((String)Session["EXISTENTES"]);
+                int existencias = Convert.ToInt32((String)Session["EXISTENCIAS"]);
                 DataSet Dts = new DataSet();
-                Dts = Ws.GetListInventario("", "", "", inventario, "", maximos, minimos, existentes, "S");
+                Dts = Ws.GetListInventario("", "", "", inventario, "", maximos, minimos, existencias, "S");
 
                 txtSucursal.Items.Clear();
                 txtSucursal.DataSource = Dts;
@@ -136,11 +136,8 @@ namespace ViewsLayer
 
         protected void btnCrear_Click(object sender, EventArgs e)
         {
-            Session["op"] = "I";
-            txtEmpresa.Text = "";
-            txtSucursal.Text = "";
+            Session["op"] = "I";            
             txtBodega.Text = "";
-            txtInventario.Text = "";
             txtNombre.Text = "";
             txtUbicacion.Text = "";
 

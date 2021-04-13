@@ -134,9 +134,6 @@ namespace ViewsLayer
         protected void btnCrear_Click(object sender, EventArgs e)
         {
             Session["op"] = "I";
-            txtEmpresa.Text = "";
-            txtSucursal.Text = "";
-            txtBodega.Text = "";
             txtSeccion.Text = "";
             txtDescripcion.Text = "";
 
@@ -154,11 +151,14 @@ namespace ViewsLayer
                 GridViewRow row = tbl.Rows[tbl.SelectedIndex];
 
                 Session["op"] = "U";
-                txtEmpresa.Text = row.Cells[1].Text;
-                txtSucursal.Text = row.Cells[2].Text;
-                txtBodega.Text = row.Cells[3].Text;
-                txtSeccion.Text = row.Cells[4].Text;
-                txtDescripcion.Text = row.Cells[5].Text;
+                ListItem item1 = txtEmpresa.Items.FindByValue(row.Cells[1].Text);
+                txtEmpresa.SelectedIndex = txtEmpresa.Items.IndexOf(item1);
+                ListItem item2 = txtSucursal.Items.FindByValue(row.Cells[3].Text);
+                txtSucursal.SelectedIndex = txtSucursal.Items.IndexOf(item2);
+                ListItem item3 = txtBodega.Items.FindByValue(row.Cells[5].Text);
+                txtBodega.SelectedIndex = txtBodega.Items.IndexOf(item3);
+                txtSeccion.Text = row.Cells[7].Text;
+                txtDescripcion.Text = row.Cells[8].Text;
 
                 txtSeccion.ReadOnly = true;
                 btnEliminar.Visible = true;
@@ -217,7 +217,7 @@ namespace ViewsLayer
 
         private String OracleExecute(string op)
         {
-            String result = Ws.MaintenanceSeccion(txtEmpresa.Text, txtSucursal.Text, txtBodega.Text, txtSeccion.Text, txtDescripcion.Text, op);
+            String result = Ws.MaintenanceSeccion(txtEmpresa.SelectedValue.ToString(), txtSucursal.SelectedValue.ToString(), txtBodega.SelectedValue.ToString(), txtSeccion.Text, txtDescripcion.Text, op);
             return result;
         }
     }
